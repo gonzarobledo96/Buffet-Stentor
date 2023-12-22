@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
+
 import Navbar from './assets/components/pagina-principal/Navbar';
 import Cartelpy from './assets/components/cartel-pedidos-ya/cartelpy';
 import MenuHorarios from './assets/components/Menu-y-horarios/MenuYhorarios';
