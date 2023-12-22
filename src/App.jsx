@@ -24,11 +24,8 @@ function App() {
      <HorariosDeAtencion /> 
      < MenuHorarios />
      <Promocion />
-     
      <Eventos />
-     
      <Galeria />  
-     
      <Ubicacion />
      
    </div>
