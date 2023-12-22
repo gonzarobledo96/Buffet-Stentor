@@ -1,0 +1,664 @@
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBurger, faPizzaSlice, faHotdog, faWineBottle,  faBreadSlice, faBacon, faCloud, faCoins} from '@fortawesome/free-solid-svg-icons';
+
+
+
+
+// Componente reutilizable para cada pizza
+function MenuSection() {
+  const [selectedMenu, setSelectedMenu] = useState('Pizzas');
+  
+  const [mensajes, setMensajes] = useState({
+    pizzaMusarela: null,
+    pizzaJamon: null,
+    pizzaNapolitana: null,
+    pizzaHuevo: null,
+    pizzaStentor: null,
+    HamburguesaClasica: null,
+    HamburguesaCompleta: null,
+    MilanesaClasica: null,
+    MilanesaNapolitana: null,
+    MilanesaCaballo: null,
+    Empanadasjq: null,
+    EmpanadasPollo: null,
+    EmpanadasCarne: null,
+
+    // ... otros elementos de menú
+  });
+
+  const handleMenuItemClick = (menuOption) => {
+  setSelectedMenu(menuOption);
+  setMensajes((prevMensajes) => ({
+    ...prevMensajes,
+    [menuOption]: null,
+  }));
+  };
+// Este codigo mantiene el color del menu en la opcion seleccionada para que el cliente sepa en el menu que esta
+document.querySelectorAll('.menu button').forEach((button) => {
+  button.classList.remove('selected');
+});
+
+
+
+  const [votos, setVotos] = useState({
+    pizzaMusarela: null,
+    pizzaJamon: null,
+    pizzaNapolitana: null,
+    pizzaHuevo: null,
+    pizzaStentor: null,
+    HamburguesaClasica: null,
+    HamburguesaCompleta: null,
+    MilanesaClasica: null,
+    MilanesaNapolitana: null,
+    MilanesaCaballo: null,
+    Empanadasjq: null,
+    EmpanadasPollo: null,
+    EmpanadasCarne: null,
+    // ... otros elementos de menú
+  });
+
+  const handleVoto = (valor, menuItem) => {
+    setVotos((prevVotos) => ({
+      ...prevVotos,
+      [menuItem]: valor,
+    }));
+
+    setMensajes((prevMensajes) => ({
+      ...prevMensajes,
+      [menuItem]: '¡Gracias por votar! 👍',
+    }));
+
+    setTimeout(() => {
+      setMensajes((prevMensajes) => ({
+        ...prevMensajes,
+        [menuItem]: null,
+      }));
+    }, 2000);
+  };
+
+  const handleStarHover = (valor, menuItem) => {
+    const estrellas = document.querySelectorAll(`.${menuItem} .star`);
+    estrellas.forEach((estrella, index) => {
+      if (index < valor) {
+        estrella.classList.add('hovered');
+      } else {
+        estrella.classList.remove('hovered');
+      }
+    });
+  };
+  
+  const handleStarLeave = (menuItem) => {
+    const estrellas = document.querySelectorAll(`.${menuItem} .star`);
+    estrellas.forEach((estrella) => {
+      estrella.classList.remove('hovered');
+    });
+  };
+  
+  const handleStarClick = (valor, menuItem) => {
+    handleVoto(valor, menuItem);
+    handleStarLeave(menuItem);
+  };
+  
+ 
+
+  let content = null;
+  switch (selectedMenu) {
+    case 'Pizzas':
+      content = (
+        <div className="fondoDeLosPrecios">
+          <div className="menu-container">
+    <div className='menu-item pizzaMusarela'>
+  <img src="/src/assets/components/img/pizza-huevo.webp" alt="Pizza" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.pizzaMusarela >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'pizzaMusarela')}
+        onMouseOut={() => handleStarLeave('pizzaMusarela')}
+        onClick={() => handleStarClick(valor, 'pizzaMusarela')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.pizzaMusarela || '5'}</p>
+  </div>
+  {mensajes.pizzaMusarela && <div className="mensaje-temporal">{mensajes.pizzaMusarela}</div>}
+  <div >
+    <h3>Pizza Mozza</h3>
+    <p className='condimentos'>Queso, orégano, aceitunas, provenzal  </p>
+    {/* <br /> */}
+    <p className="price">$3.600</p>
+    <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+
+  {/* <div className=' mt-2'>
+  <a  href="https://api.whatsapp.com/send?phone=69115723&text=Hola%20sean%20Bienvenidos!" target="_blank" rel="noopener noreferrer"><button className='boton-whatsapp'>Consultar WhatsApp</button></a>
+  </div> */}
+
+  </div>
+</div>
+
+<div className='menu-item pizzaJamon'>
+  <img src="/src/assets/components/img/pizza-huevo.webp" alt="Pizza" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.pizzaJamon >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'pizzaJamon')}
+        onMouseOut={() => handleStarLeave('pizzaJamon')}
+        onClick={() => handleStarClick(valor, 'pizzaJamon')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.pizzaJamon || '5'}</p>
+  </div>
+  {mensajes.pizzaJamon && <div className="mensaje-temporal">{mensajes.pizzaJamon}</div>}
+  <div>
+    <h3>Pizza Jamon</h3>
+    <p className='condimentos'>Queso, jamon, orégano, aceitunas, provenzal </p>
+    
+    <p className="price">$3.600</p>
+    <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+
+<div className='menu-item pizzaNapolitana'>
+<img src="/src/assets/components/img/pizza-huevo.webp" alt="Pizza" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.pizzaNapolitana >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'pizzaNapolitana')}
+        onMouseOut={() => handleStarLeave('pizzaNapolitana')}
+        onClick={() => handleStarClick(valor, 'pizzaNapolitana')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.pizzaNapolitana || '5'}</p>
+  </div>
+  {mensajes.pizzaNapolitana && <div className="mensaje-temporal">{mensajes.pizzaNapolitana}</div>}
+  <div>
+  <h3>Pizza Napo</h3>
+      <p className='condimentos'>Queso, tomate, orégano, aceitunas, provenzal</p>
+      <p className="price">$4.400</p>
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+
+
+<div className='menu-item pizzaHuevo'>
+<img src="/src/assets/components/img/pizza-huevo.webp" alt="Pizza" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.pizzaHuevo >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'pizzaHuevo')}
+        onMouseOut={() => handleStarLeave('pizzaHuevo')}
+        onClick={() => handleStarClick(valor, 'pizzaHuevo')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.pizzaHuevo || '5'}</p>
+  </div>
+  {mensajes.pizzaHuevo && <div className="mensaje-temporal">{mensajes.pizzaHuevo}</div>}
+  <div>
+  <h3>Pizza huevo</h3>
+      <p className='condimentos'>Queso, huevo, orégano, aceitunas, provenzal</p>
+      {/* <br /> */}
+      <p className="price">$4.600</p>
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+
+
+<div className='menu-item pizzaStentor'>
+<img src="/src/assets/components/img/pizza-huevo.webp" alt="Pizza" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.pizzaStentor >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'pizzaStentor')}
+        onMouseOut={() => handleStarLeave('pizzaStentor')}
+        onClick={() => handleStarClick(valor, 'pizzaStentor')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.pizzaStentor || '5'}</p>
+  </div>
+  {mensajes.pizzaStentor && <div className="mensaje-temporal">{mensajes.pizzaStentor}</div>}
+  <div>
+      <h3>Pizza Stentor</h3>
+      <p className='condimentos'>Queso, huevo frito, papas fritas, orégano, provenzal.</p>
+      <p className="price">$4.600</p>
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+    </div>
+</div>
+ 
+</div>
+     </div>
+      );
+      break;
+    case 'Hamburguesas':
+      content = (
+        <div className="fondoDeLosPrecios">
+              <div className="menu-container">
+  <div className='menu-item HamburguesaClasica'>
+  <img src="/src/assets/components/img/hamburguesa-completa.webp" alt="Hamburguesa" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.HamburguesaClasica >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'HamburguesaClasica')}
+        onMouseOut={() => handleStarLeave('HamburguesaClasica')}
+        onClick={() => handleStarClick(valor, 'HamburguesaClasica')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.HamburguesaClasica || '5'}</p>
+  </div>
+  {mensajes.HamburguesaClasica && <div className="mensaje-temporal">{mensajes.HamburguesaClasica}</div>}
+  <div>
+  <h3 className=' align-items-center'>Hamburguesa sola con papas fritas</h3>
+      {/* <p>Queso, tomate, orégano, aceitunas, provenzal.</p> */}
+      <p className="price">$4.400</p>
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+
+
+<div className='menu-item HamburguesaCompleta'>
+  <img src="/src/assets/components/img/hamburguesa-completa.webp" alt="Hamburguesa" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.HamburguesaCompleta >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'HamburguesaCompleta')}
+        onMouseOut={() => handleStarLeave('HamburguesaCompleta')}
+        onClick={() => handleStarClick(valor, 'HamburguesaCompleta')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.HamburguesaCompleta || '5'}</p>
+  </div>
+  {mensajes.HamburguesaCompleta && <div className="mensaje-temporal">{mensajes.HamburguesaCompleta}</div>}
+  <div>
+  <h3>Hamburguesa completa con papas fritas</h3>
+      {/* <p>Queso, tomate, orégano, aceitunas, provenzal.</p> */}
+      <p className="price">$4.400</p>
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+</div>
+  </div>
+      );
+      break;
+      case 'Milanesas':
+        content = (
+          <div className="fondoDeLosPrecios">
+         <div className="menu-container">
+  <div className='menu-item MilanesaClasica'>
+  <img src="/src/assets/components/img/milanesa-clasica.webp" alt="Milanesas" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.MilanesaClasica >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'MilanesaClasica')}
+        onMouseOut={() => handleStarLeave('MilanesaClasica')}
+        onClick={() => handleStarClick(valor, 'MilanesaClasica')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.MilanesaClasica || '5'}</p>
+  </div>
+  {mensajes.MilanesaClasica && <div className="mensaje-temporal">{mensajes.MilanesaClasica}</div>}
+  <div>
+  <h3 className=' align-items-center'>Milanesa clasica</h3>
+  <p className='condimentos'>Papas sola con papas fritas</p>
+      <p className="price">$4.400</p>
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+
+  <div className='menu-item MilanesaNapolitana'>
+  <img src="/src/assets/components/img/Milanesa-napolitana.webp" alt="Milanesas" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.MilanesaNapolitana >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'MilanesaNapolitana')}
+        onMouseOut={() => handleStarLeave('MilanesaNapolitana')}
+        onClick={() => handleStarClick(valor, 'MilanesaNapolitana')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.MilanesaNapolitana || '5'}</p>
+  </div>
+  {mensajes.MilanesaNapolitana && <div className="mensaje-temporal">{mensajes.MilanesaNapolitana}</div>}
+  <div>
+  <h3 className=' align-items-center'>Milanesa Napolitana</h3>
+  <p>Musarela, jamon y tomate</p> 
+  <p className="price">$4.000</p>
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+
+  <div className='menu-item MilanesaCaballo'>
+  <img src="/src/assets/components/img/Milanesa-napolitana.webp" alt="Milanesas" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.MilanesaCaballo >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'MilanesaCaballo')}
+        onMouseOut={() => handleStarLeave('MilanesaCaballo')}
+        onClick={() => handleStarClick(valor, 'MilanesaCaballo')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.MilanesaCaballo || '5'}</p>
+  </div>
+  {mensajes.MilanesaCaballo && <div className="mensaje-temporal">{mensajes.MilanesaCaballo}</div>}
+  <div>
+  <h3 className=' align-items-center'>Milanesa a caballo</h3>
+  <p className='condimentos'>Milanesa con huevo frito </p> 
+  <p className="price">$4.400</p>
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+
+</div>
+    </div>
+        );
+        break;
+        case 'Empanadas':
+          content = (
+            <div className="fondoDeLosPrecios">
+        <div className="menu-container">
+  <div className='menu-item Empanadasjq'>
+  <img src="/src/assets/components/img/empanadas-de-jamon-queso.webp" alt="empanadas de jamon y queso" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.Empanadasjq >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'Empanadasjq')}
+        onMouseOut={() => handleStarLeave('Empanadasjq')}
+        onClick={() => handleStarClick(valor, 'Empanadasjq')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.Empanadasjq || '5'}</p>
+  </div>
+  {mensajes.Empanadasjq && <div className="mensaje-temporal">{mensajes.Empanadasjq}</div>}
+  <div>
+  <h3 className=' align-items-center'>Empanadas de jamon y queso</h3>
+  <p className="price">$3.600</p>
+  {/* <p>Musarela, jamon y tomate</p>  */}
+  
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+
+  <div className='menu-item EmpanadasPollo'>
+  <img src="/src/assets/components/img/empanadas-de-pollo.webp" alt="empanadas de jamon y queso" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.EmpanadasPollo >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'EmpanadasPollo')}
+        onMouseOut={() => handleStarLeave('EmpanadasPollo')}
+        onClick={() => handleStarClick(valor, 'EmpanadasPollo')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.EmpanadasPollo || '5'}</p>
+  </div>
+  {mensajes.EmpanadasPollo && <div className="mensaje-temporal">{mensajes.EmpanadasPollo}</div>}
+  <div>
+  <h3 className=' align-items-center'>empanadas de pollo</h3>
+  <p className="price">$3.600</p>
+  {/* <p>Musarela, jamon y tomate</p>  */}
+  
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+
+
+<div className='menu-item EmpanadasCarne'>
+<img src="/src/assets/components/img/empanadas-de-carne.webp" alt="empanadas de carne" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.EmpanadasCarne >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'EmpanadasCarne')}
+        onMouseOut={() => handleStarLeave('EmpanadasCarne')}
+        onClick={() => handleStarClick(valor, 'EmpanadasCarne')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.EmpanadasCarne || '5'}</p>
+  </div>
+  {mensajes.EmpanadasCarne && <div className="mensaje-temporal">{mensajes.EmpanadasCarne}</div>}
+  <div>
+  <h3 className=' align-items-center'>Empanadas de carne</h3>
+  <p className="price">$3.600</p>
+  {/* <p>Musarela, jamon y tomate</p>  */}
+  
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+
+ 
+</div>
+      </div>
+          );
+          break;
+          case 'Medialunas':
+            content = (
+              <div className="fondoDeLosPrecios">
+          <div className="menu-container">
+    <div className="menu-item">
+      <img src="/src/assets/components/img/medialunas-de-manteca.webp" alt="Medialunas" />
+      <div>
+        <h3>Medialunas de manteca</h3>
+        {/* <p>Queso, orégano, aceitunas, provenzal.</p> */}
+        <p className="price">$500</p>
+        <button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button>
+      </div>
+    </div>
+    <div className="menu-item">
+      <img src="/src/assets/components/img/medialunas-de-jamon-y-queso.webp" alt="Medialunas de jamon y queso" />
+      <div>
+        <h3>Medialunas de jamon y queso</h3>
+        {/* <p>Queso, jamon, orégano, aceitunas, provenzal.</p> */}
+        <p className="price">$900</p>
+        <button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button>
+      </div>
+    </div>
+  </div>
+        </div>
+            );
+            break;
+            case 'Panchos':
+              content = (
+                <div className="fondoDeLosPrecios">
+            <div className="menu-container">
+      <div className="menu-item">
+        <img src="/src/assets/components/img/pancho-clasico.webp" alt="Panchos" />
+        <div>
+          <h3>Pancho clasico</h3>
+           <p className='condimentos'>Aderezo y papas</p>
+          <p className="price">$800</p>
+          <button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button>
+        </div>
+      </div>
+    </div>
+          </div>
+              );
+              break;
+              case 'Tostados':
+                content = (
+                  <div className="fondoDeLosPrecios">
+              <div className="menu-container">
+        <div className="menu-item">
+          <img src="/src/assets/components/img/Tostado pan Arabe.webp" alt="Panchos" />
+          <div>
+            <h3>Tostado Arabe</h3>
+             <p className='condimentos'>Jamon y queso</p>
+            <p className="price">$800</p>
+            <button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button>
+          </div>
+        </div>
+        <div className="menu-item">
+          <img src="/src/assets/components/img/Tostado pan Arabe.webp" alt="Panchos" />
+          <div>
+            <h3>Tostado Arabe completo</h3>
+             <p className='condimentos'>Jamon, queso, tomate, huevos revueltos</p>
+            <p className="price">$1.600</p>
+            <button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button>
+          </div>
+        </div>
+      </div>
+            </div>
+            
+                );
+                break;
+
+                case 'Bebidas':
+                content = (
+                  <div className="fondoDeLosPrecios">
+              <div className="menu-container">
+        <div className="menu-item">
+          <img src="/src/assets/components/img/aquarius.webp" alt="Panchos" />
+          <div>
+            <h3>Aquarius de pera</h3>
+             {/* <p>Aquarius de pera</p> */}
+            <p className="price">$700</p>
+            <button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button>
+          </div>
+        </div>
+        <div className="menu-item">
+          <img src="/src/assets/components/img/aquarius-manzana.webp" alt="Panchos" />
+          <div>
+            <h3>Aquarius de manzana</h3>
+             {/* <p>Jamon y queso</p> */}
+            <p className="price">$700</p>
+            <button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button>
+          </div>
+        </div>
+        <div className="menu-item">
+          <img src="/src/assets/components/img/aquarius-pomelo.webp" alt="Panchos" />
+          <div>
+            <h3>Aquarius de pomelo</h3>
+             {/* <p>Jamon y queso</p> */}
+            <p className="price">$700</p>
+            <button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button>
+          </div>
+        </div>
+      </div>
+            </div>
+                );
+                break;           
+  }
+
+  return (
+   <div>
+
+     {/* <div id="nuestrosHorarios" className="horarios-container">
+      <div className=" text-center">
+        <h1>Horarios de Atención</h1>
+      </div>
+      <div className="horarios-info">
+        <p><strong>Lunes a Sabado:</strong> 10:00 AM - 12:00 PM</p>
+         <p><strong>Sábado:</strong> 11:00 AM - 6:00 PM</p> 
+        <p><strong>Domingo:</strong> 5:00 PM - 12:00 PM</p>
+      </div>
+    </div> */}
+    
+    <div id="MenuYhorarios" className='menu'>
+      <div className=' text-center'>
+      <button
+  onClick={() => handleMenuItemClick('Pizzas')}
+  className={`menu-button ${selectedMenu === 'Pizzas' ? 'selected' : ''}`}
+>
+  <FontAwesomeIcon icon={faPizzaSlice} className="iconos fa-icon" />
+  <div className="menu-horario">
+    PIZZAS
+  </div>
+</button>
+  <button onClick={() => handleMenuItemClick('Hamburguesas')}
+  className={`menu-button ${selectedMenu === 'Hamburguesas' ? 'selected' : ''}`}>
+  <FontAwesomeIcon icon={faBurger} className="iconos fa-burger" />
+  <div className="menu-horario">
+    BURGUERS
+  </div>
+</button>
+<button
+  onClick={() => handleMenuItemClick('Milanesas')}
+  className={`menu-button ${selectedMenu === 'Milanesas' ? 'selected' : ''}`}>
+  <FontAwesomeIcon icon={faBacon} className="iconos fa-solid fa-bacon" />
+  <div className="menu-horario">MILANESAS</div>
+</button>
+<button
+  onClick={() => handleMenuItemClick('Empanadas')}
+  className={`menu-button ${selectedMenu === 'Empanadas' ? 'selected' : ''}`}>
+  <FontAwesomeIcon icon={faCloud} className="iconos fa-solid fa-cloud" fade />
+  <div className="menu-horario">EMPANADAS</div>
+</button>
+<button
+  onClick={() => handleMenuItemClick('Medialunas')}
+  className={`menu-button ${selectedMenu === 'Medialunas' ? 'selected' : ''}`}>
+  <FontAwesomeIcon icon={faCoins} className="iconos fa-solid fa-coins" />
+  <div className="menu-horario">MEDIALUNAS</div>
+</button>
+<button
+  onClick={() => handleMenuItemClick('Panchos')}
+  className={`menu-button ${selectedMenu === 'Panchos' ? 'selected' : ''}`}>
+  <FontAwesomeIcon icon={faHotdog} className="iconos fa-solid fa-hotdog" />
+  <div className="menu-horario">PANCHOS</div>
+</button>
+<button
+  onClick={() => handleMenuItemClick('Tostados')}
+  className={`menu-button ${selectedMenu === 'Tostados' ? 'selected' : ''}`}>
+  <FontAwesomeIcon icon={faBreadSlice} className="iconos fa-solid fa-bread-slice" />
+  <div className="menu-horario">TOSTADOS</div>
+</button>
+<button
+  onClick={() => handleMenuItemClick('Bebidas')}
+  className={`menu-button ${selectedMenu === 'Bebidas' ? 'selected' : ''}`}>
+  <FontAwesomeIcon icon={faWineBottle} className="iconos fa-solid fa-wine-bottle" />
+  <div className="menu-horario">BEBIDAS</div>
+</button>
+      </div>
+      <div>
+        {content}
+      </div>
+    </div>
+   </div>
+  );
+}
+
+export default MenuSection;
