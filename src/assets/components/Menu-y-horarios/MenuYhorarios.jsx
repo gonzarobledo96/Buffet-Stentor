@@ -2,7 +2,13 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBurger, faPizzaSlice, faHotdog, faWineBottle,  faBreadSlice, faBacon, faCloud, faCoins} from '@fortawesome/free-solid-svg-icons';
 
-import imagen from '../img/pizza-jamon - copia.jpeg';
+import ImagenPizzaMuzza from '../img/pizza-muzzarella - copia.jpeg';
+import ImagenPizzaJamon from '../img/pizza-jamon - copia.jpeg';
+import ImagenPizzaNapo from '../img/pizza-stentor - copia.jpeg';
+import ImagenPizzaHuevo from '../img/pizza-huevo.webp';
+import ImagenPizzaStentor from '../img/pizza-stentor - copia.jpeg';
+
+
 
 
 // Componente reutilizable para cada pizza
@@ -127,7 +133,8 @@ document.querySelectorAll('.menu button').forEach((button) => {
         <div className="fondoDeLosPrecios">
           <div className="menu-container">
     <div className='menu-item pizzaMusarela'>
-  <img src="/src/assets/components/img/pizza-muzzarella - copia.jpeg" alt="Pizza" />
+  {/* <img src="/src/assets/components/img/pizza-muzzarella - copia.jpeg" alt="Pizza" /> */}
+  <img src={ImagenPizzaMuzza} alt="Descripción" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -144,7 +151,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   </div>
   {mensajes.pizzaMusarela && <div className="mensaje-temporal">{mensajes.pizzaMusarela}</div>}
   <div >
-    <h3>Pizza Mozza</h3>
+    <h3>Pizza Muzza</h3>
     <p className='condimentos'>Queso, orégano, aceitunas, provenzal<strong className=' text-white'>texto-aline-atexto-alinea</strong></p>
     {/* <br /> */}
     <p className="price">$3.600</p>
@@ -159,7 +166,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
 
 <div className='menu-item pizzaJamon'>
   {/* <img src="/src/assets/components/img/pizza-jamon - copia.jpeg" alt="Pizza" /> */}
-  <img src={imagen} alt="Descripción" />
+  <img src={ImagenPizzaJamon} alt="Descripción" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -185,7 +192,8 @@ document.querySelectorAll('.menu button').forEach((button) => {
 </div>
 
 <div className='menu-item pizzaNapolitana'>
-<img src="/src/assets/components/img/pizza-huevo.webp" alt="Pizza" />
+{/* <img src="/src/assets/components/img/pizza-huevo.webp" alt="Pizza" /> */}
+<img src={ImagenPizzaNapo} alt="Descripción" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -211,7 +219,8 @@ document.querySelectorAll('.menu button').forEach((button) => {
 
 
 <div className='menu-item pizzaHuevo'>
-<img src="/src/assets/components/img/pizza-huevo.webp" alt="Pizza" />
+{/* <img src="/src/assets/components/img/pizza-huevo.webp" alt="Pizza" /> */}
+<img src={ImagenPizzaHuevo} alt="Descripción" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -239,7 +248,8 @@ document.querySelectorAll('.menu button').forEach((button) => {
 
 
 <div className='menu-item pizzaStentor'>
-<img src="/src/assets/components/img/pizza-stentor - copia.jpeg" alt="Pizza" />
+{/* <img src="/src/assets/components/img/pizza-stentor - copia.jpeg" alt="Pizza" /> */}
+<img src={ImagenPizzaStentor } alt="Descripción" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
