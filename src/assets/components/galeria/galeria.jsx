@@ -2,22 +2,15 @@
 function Galeria() {
   const imagenes = [
     '/src/assets/components/img/unnamed.jpg',
+    '/src/assets/components/img/unnamed4.jpg',
     '/src/assets/components/img/unnamed2.jpg',
     '/src/assets/components/img/unnamed3.jpg',
-
-
-    '/src/assets/components/img/pancho-clasico.webp',
-    '/src/assets/components/img/hamburguesa-completa.webp',
-    '/src/assets/components/img/milanesa-clasica.webp',
-    '/src/assets/components/img/pizza-huevo.webp',
-    '/src/assets/components/img/porcion-fritas-huevo.webp',
-    '/src/assets/components/img/pancho-clasico.webp',
   ];
 
   return (
-<div id="Galeria">
+<div id="Galeria" className="galeria">
     <div className=" text-center">
-        <h1>Galeria</h1>
+        {/* <h1>GALERIA</h1> */}
     </div>
 <div className="galeria-container">
       {imagenes.map((imagen, index) => (

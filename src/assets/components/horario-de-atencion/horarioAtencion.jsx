@@ -16,7 +16,7 @@ function HorariosDeAtencion() {
       </div>
 
 
-      <div className="horarios-infoo">
+      <div className="horarios-info">
         <div className="horario-item">
           <h2>BUFFET</h2>
           {/* <FontAwesomeIcon icon={faClock} /> */}
@@ -30,24 +30,7 @@ function HorariosDeAtencion() {
           <p className="text-center">10:00 AM - 12:00 PM</p>
         </div>
       </div>
-    
-
-
-
-
-
-      {/* <div className="horarios-info">
-      <FontAwesomeIcon icon={faClock} />
-        <p><strong>Lunes a Sabado:</strong> 10:00 AM - 12:00 PM - <strong>Domingo:</strong> 5:00 PM - 12:00 PM</p>
-        <FontAwesomeIcon icon={ faCalendarAlt} />
-         <p><strong>Sábado:</strong> 11:00 AM - 6:00 PM</p>
-        <p></p>
-      </div> */}
-      
     </div>
-    {/* <footer>
-<p>&copy; 2024 Buffet del Club Atlético Stentor. Todos los derechos reservados.</p>
-</footer> */}
     </div>
   );
 }

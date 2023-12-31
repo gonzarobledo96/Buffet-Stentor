@@ -1,126 +1,114 @@
-// import { Navbar, Nav, Container } from 'react-bootstrap';
 
-// const NavbarComponent = () => {
-//   return (
-//     <Navbar bg="dark" variant="dark" expand="lg">
-//       <Container>
-//         <Navbar.Brand href="#home">Mi App</Navbar.Brand>
-//         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//         <Navbar.Collapse id="basic-navbar-nav">
-//           <Nav className="me-auto">
-//             <Nav.Link href="#pagina-principal">Página Principal</Nav.Link>
-//             <Nav.Link href="#pagina-dos">Página Dos</Nav.Link>
-//           </Nav>
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//   );
-// };
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+ import { useState } from 'react';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+
+
+
+
 
 
 // export default NavbarComponent;
 const PaginaPrincipal = () => {
+
+  const [isActive, setIsActive] = useState(false);
+
+  const handleToggleClick = () => {
+    setIsActive(!isActive);
+  };
+  
+
     return (
-      <nav className="inicio" id="inicio">
+      <div className="inicio" id="inicio">
         {/* fondo del navbar */}
         <section id="barramenu">
     </section>
       <div className="fixed-top">
-        <nav className="navbar navbar-expand-lg fondo-del-nav">
-          <div className="container-fluid">
-            <div
-              className="navbar-toggler hamburger"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <div className="hamburger__container justify-content-center">
-                <div className="hamburger__inner"></div>
-                <div className="hamburger__hidden"></div>
-              </div>
+      <nav className="navbar navbar-expand-lg fondo-del-nav">
+        
+        <div className="container-fluid">
+        <img src="/src/assets/components/img/letras - copia.png" alt="" />
+        <div className="navbar-toggler hamburger" 
+  type="button"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+  onClick={handleToggleClick}
+>
+  <div className="hamburger__container justify-content-center">
+    <div className="hamburger__inner">
+      {/* Utiliza el ícono de hamburguesa o cruz según el estado del menú */}
+      <FontAwesomeIcon icon={isActive ? faTimes : faBars} />
+    </div>
+    <div className="hamburger__hidden"></div>
+  </div>
+</div>
+
+
+
+
+          <div
+            className="collapse navbar-collapse posicion-nav"
+            id="navbarSupportedContent"
+          >
+            <ul className="navbar-nav">
+
+            <li className="nav-item">
+              <div id="logoresponsive">                 
+              <figure>
+                <a href="#"><img src="/src/assets/components/img/descarga_preview_rev_1 (1).png" alt="inicio"></img></a>
+              </figure>
             </div>
-
-
-
-            <div  className="nav-item letras">
-                  {/* <img src="/src/assets/components/img/letras.png" alt="" /> */}
-                  <img src="/src/assets/components/img/letras - copia.png" alt="" />
-                </div>
-
-
-
-
-            <div className="collapse navbar-collapse posicion-nav" id="navbarSupportedContent">
-              <ul className="navbar-nav">
+              <a
+                className="nav-link diseño-texto-navbar"
+                href="#trayectoria"
+                rel="noopener noreferrer"
+                style={{ color: 'white' }}>
+                  PEDIDOS YA</a>
+              </li>
 
               <li className="nav-item">
-                <div id="logoresponsive">
-                  {/* logo de navbar */}
-			<figure>
-				<a href="#"><img src="/src/assets/components/img/descarga_preview_rev_1 (1).png" alt="inicio"></img></a>
-			</figure>
-		</div>
-                <a
-                  className="nav-link diseño-texto-navbar"
-                  href="#trayectoria"
-                  rel="noopener noreferrer"
-                  style={{ color: 'white' }}>
-                    ----------</a>
-                </li>
+                <a className="nav-link diseño-texto-navbar" href="#pedidosYa" rel="noopener noreferrer">
+                PEDIDOS YA
+                </a>
+              </li>
 
               <li className="nav-item">
-                  <a className="nav-link diseño-texto-navbar" href="#pedidosYa" rel="noopener noreferrer">
-                  PEDIDOS YA
-                  </a>
-                </li> 
-                
-                <li className="nav-item">
-                  <a className="nav-link diseño-texto-navbar" href="#MenuYhorarios" rel="noopener noreferrer">
-                  MENU Y PRECIOS
-                  </a>
-                </li>
+                <a className="nav-link diseño-texto-navbar" href="#MenuYhorarios" rel="noopener noreferrer">
+                MENU Y PRECIOS
+                </a>
+              </li>
 
-                <li className="nav-item">
-                  <a className="nav-link diseño-texto-navbar" href="#promociones" rel="noopener noreferrer">
-                    PROMOCIONES
-                  </a>
-                </li>
+              <li className="nav-item">
+                <a className="nav-link diseño-texto-navbar" href="#promociones" rel="noopener noreferrer">
+                  PROMOCIONES
+                </a>
+              </li>
 
-           
-
-                <li className="nav-item">
-                  <a className="nav-link diseño-texto-navbar" href="#eventos" rel="noopener noreferrer">
-                  EVENTOS
-                  </a>
-                </li>
-                
-               
-                 {/* <li className="nav-item">
-                  <a className="nav-link diseño-texto-navbar" href="#nuestrosHorarios" rel="noopener noreferrer">
-                  HORARIOS DEL BUFFET
-                  </a>
-                </li>  */}
-                <li className="nav-item">
-                  <a className="nav-link diseño-texto-navbar" href="#Galeria" rel="noopener noreferrer">
-                    GALERIA
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link diseño-texto-navbar" href="#ubicacion" rel="noopener noreferrer">
-                  UBICACION
-                  </a>
-                </li>
-                 
-               
-              </ul>
-            </div>
+              <li className="nav-item">
+                <a className="nav-link diseño-texto-navbar" href="#eventos" rel="noopener noreferrer">
+                EVENTOS
+                </a>
+              </li>
+                          
+              <li className="nav-item">
+                <a className="nav-link diseño-texto-navbar" href="#Galeria" rel="noopener noreferrer">
+                  GALERIA
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link diseño-texto-navbar" href="#ubicacion" rel="noopener noreferrer">
+                UBICACION
+                </a>
+              </li>          
+              
+            </ul>
           </div>
-        </nav>
+        </div>
+      </nav>
       </div>
 
 
@@ -164,13 +152,6 @@ const PaginaPrincipal = () => {
   </button>
 </div>
 
-{/* <div className='fondo-delivery-de-py'>
-  <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><img src="/src/assets/components/img/aaa - copia (2).jpg" alt="" /></a>
-</div> */}
-
-
-
-
 {/* Logo de whatsapp y instagram */}
 <div className="footer-container">
   
@@ -185,9 +166,12 @@ const PaginaPrincipal = () => {
         <p>PY</p>
       </a>
     </div>
-    </nav>
+    </div>
     );
   };
   
 
 export default  PaginaPrincipal;
+
+
+

@@ -1,27 +1,71 @@
 @import url('https://fonts.googleapis.com/css2? family= Poppins:wght@500 & display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
 
-
-
-.letras img {
-  max-width: 200px; /* Puedes ajustar el valor según tus necesidades */
-  height: auto; /* Esto asegura que la altura se ajuste proporcionalmente a la anchura */
-}
-
-.colores{
-  background-color: #26235E;
-  background-color: rgb(226, 29, 38); 
-  
-}
-
 body {
   font-family: 'Montserrat', sans-serif;
      margin: 0;
     padding: 0;
-    /* background-color: #EBEBEB; */
     background-color: #fafafa;
   }
   
+
+
+/* *********************/
+/* MENU HAMBURGUESA ****/
+/* *********************/
+.hamburger {
+  padding: 15px;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  background-color: transparent;
+  /* border: solid 2px rgb(226, 29, 38); */
+  border: none;
+}
+.hamburger__container {
+  width: 36px;
+  height: 24px;
+  position: relative;
+}
+
+
+
+.hamburger__inner {
+ display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  color: rgb(226, 29, 38); 
+}
+
+
+
+.posicion-nav.collapse.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* SI ELIMINO ESTO EL LOGO SE PONE EN EL CENTRO */
+/* Si los elementos son listas <li> dentro de un <ul>, puedes aplicar estilos así: */
+/* .posicion-nav.collapse.show ul.navbar-nav {
+  text-align: center;
+  width: 100%;  Asegura que ocupe el ancho completo 
+}
+
+.posicion-nav.collapse.show li.nav-item {
+  width: 100%;  Asegura que cada elemento ocupe el ancho completo 
+  text-align: center;
+} */
+
+/* También puedes aplicar estilos directamente a los elementos <a> si no están dentro de un <ul>/<li> */
+.posicion-nav.collapse.show a {
+  display: block; /* Para que ocupe el ancho completo */
+  text-align: center;
+}
+
+
+
   /* LOGO DE WHATSAPP */
   .float {
       position: fixed;
@@ -89,8 +133,6 @@ body {
   line-height: 50px; /* Centra verticalmente el contenido */
 }
 .footer-link-ig:hover {
-  /* color: #e4405f;
-  background: #ffffff;  */
   transition: 0.5s;
   transform: scale(1.2);
 }
@@ -125,6 +167,18 @@ body {
 /********************/
 /* NAVBAR-PRINCIPAL */
 /********************/
+.inicio {
+  /* background: url("/src/assets/components/img/puerta-de-stentor\ -\ copia.jpeg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh; */
+}
+ .fondo-del-nav {
+  background-color: white;
+  border-bottom: solid 5px;
+  border-color: rgb(226, 29, 38); 
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+} 
 .posicion-nav {
   justify-content: center;
   /* padding-left: 10%;
@@ -133,46 +187,98 @@ body {
 .logo-transporte-escolar {
   margin-top: -10px;
 }
+/* padding: 0px 0px 0px 0px; */
 .nav-item a {
   text-decoration: none;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
+  margin: 8px 15px;
+  padding: 16px 8px 0px;
 }
 .diseño-texto-navbar {
   padding-top: 1rem;
   font-family: 'Montserrat', sans-serif;
   color: rgb(0, 0, 0);
   font-size: 0.9rem;
-  font-weight:900;
-  margin-left: 20px;
+  font-weight: 900;
   transition: 0.3s;
+  border-bottom: solid 2px transparent;
 }
-
-.diseño-texto-navbar:hover {
- transition: 0.3s;
-  color: rgb(226, 29, 38); 
+.diseño-texto-navbar:hover,
+.nav-item.seleccionado .diseño-texto-navbar {
+  transition: 0.3s;
+  color: rgb(226, 29, 38);
+  border-bottom: solid 2px rgb(226, 29, 38);
 }
-  #barramenu {
+  /* #barramenu {
     position: fixed;
     width: 100%;
     height: 60px;
     justify-content: space-between;
     padding-left: 2.2em;
     padding-right: 2.2em;
-    padding-bottom: 4.5em;
+   
+    padding-bottom: 4em;
     background-color: white;
     box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
     top: 0;
     border-bottom: solid 5px;
     border-color: rgb(226, 29, 38); 
     z-index: 1000;
-  }
+  } */
       #logoresponsive {
         position: fixed;
-        z-index: 10000;
     }
+    #logoresponsive img {
+      max-width: 100%; /* La imagen no puede ser más ancha que su contenedor */
+      height: auto; /* Mantener la proporción de aspecto original */
+  }
+
+
+
+/***********************/
+/* FONDO DE PEDIDOS YA */
+/***********************/ 
 .fondo-delivery-de-py img{
   max-width: 100%;
+}
+
+
+
+/*************************************/
+/* FONDO Y ESTILOS PARA LOS HORARIOS */
+/*************************************/
+  .horarios-container {
+    background-color: #26235E;
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+   .horarios-container h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+  .text-center {
+    text-align: center;
+  }
+  .horarios-info {
+    display: flex;
+    justify-content: space-around; /* Opcional: puedes probar con 'space-between' para más espacio entre los elementos */
+    max-height: 200px; /* Ajusta la altura máxima según tus necesidades */
+    overflow: hidden; /* Para ocultar cualquier desbordamiento del contenido */
+  }
+  .horario-item {
+    text-align: center;
+    width: 100%; /* Esto asegura que ambos elementos ocupen el mismo ancho */
+    box-sizing: border-box; /* Asegura que el ancho incluya el relleno y el borde */
+  }
+  .horarios-info p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  .horario-item > h2,
+.horario-item > p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -191,13 +297,8 @@ body {
 }
 .fondoDeLosPrecios{
   margin: 3em ;  
-  /* margin: 2em 6em 6em 6em;   */
-   /* padding: 5em; */
 }
 .menu-item {
-   /* display: flex;
-  flex-direction: column;
-  align-items: center;  */
   background-color: #fff;
   padding: 10px;
   margin-bottom: 20px;
@@ -217,7 +318,6 @@ display: flex;
 justify-content: center;
   text-align: center;
 }
-
 .menu-item > div p {/*esto es para centrar verticalmente los párrafos dentro de su contenedor. ya que align-items y las propiedades relacionadas como display: flex y justify-content aplican principalmente a contenedores flexibles, no a elementos de bloque como los párrafos. */
   display: flex;
   flex-direction: column;
@@ -232,8 +332,6 @@ justify-content: center;
   justify-content: center;
 }
 .menu-item img {
-  /* max-width: 100%;
-  height: auto; */
 width: 100%;
 height: 150;
 margin-right: 20px;
@@ -257,7 +355,6 @@ border-radius: 25px;
 .star.hovered {
   color: #26235E;
 }
-
 .star.votada {
   color: #26235E;
 }
@@ -301,6 +398,9 @@ display: grid;
 grid-template-columns: repeat(5, 1fr);/*  5 columnas con igual fracción del ancho */
 gap: 16px;
 }
+
+
+
 /********************/
 /* MENU DE LA CARTA */
 /********************/
@@ -322,7 +422,6 @@ gap: 16px;
   transition: 0.2s;
   background-color: #fafafa;
 }
-
 /* BOTON DE PEDIDOS YA */
 .menu-item .condimentos{
   padding-top: 1em;
@@ -347,7 +446,6 @@ gap: 16px;
   color: rgb(234, 4, 78);
   border: solid 1px;
 }
-
 .menu-item .boton-whatsapp{
   width: 100%;
   background-color: #25d366;
@@ -366,6 +464,49 @@ background-color:  white;
 color: #25d366;
 border: solid 1px;
 }
+
+
+
+/*******************/
+/* Promociones.css */
+/*******************/
+/* esto lo agregue para ver como queda el contador */
+.promociones{
+  background-image: url(/src/assets/components/img/fondo-promociones.png);
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  /* padding: 100px; */
+  padding: 470px 100px 100px 100px;
+}
+.promociones-container {
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.promocion-imagen {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.contador-regresivo {
+  text-align: center;
+}
+.contador-regresivo p {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+/* Estilos para el contador regresivo de react-countdown */
+.tiempo-restante {
+  font-size: 1.7rem;
+  background-color: #ececec;
+  border-radius: 25px;
+  padding: 15px;
+  color: #26235E;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 
 
 /***********/
@@ -410,13 +551,19 @@ border-radius: 25px;
 /***************/
 /* Galeria.css */
 /***************/
+.galeria h1{
+padding: 3em 0em 0em 0em;
+  color: #ffc107;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 2.6em;
+}
 .galeria-container {
-  padding: 3em;
+  background-color: #ececec;
+  padding: 4em 3em 3em 3em;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-
 .galeria-imagen {
   width: 100%;
   height: auto;
@@ -424,152 +571,37 @@ border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
 }
-/*******************/
-/* Promociones.css */
-/*******************/
-/* esto lo agregue para ver como queda el contador */
-.promociones{
-  background-image: url(/src/assets/components/img/promocion-slide-malibu-bar-en-cali.jpg);
-  background-size: cover;
-  background-position: center center;
-  height: 100vh;
-  /* padding: 100px; */
-  padding: 400px 100px 100px 100px;
-}
-
-
-.promociones-container {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  /* padding: 20px; */
-  background-color: #f7f7f7;
-  /* border: 1px solid #ddd; */
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.promocion-imagen {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.contador-regresivo {
-  text-align: center;
-}
-
-.contador-regresivo h3 {
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.contador-regresivo p {
-  color: #555;
-  margin-bottom: 20px;
-}
-
-/* Estilos para el contador regresivo de react-countdown */
-.tiempo-restante {
-  font-size: 1.5rem;
-  color: #ff6347; /* Color rojo */
-  font-weight: bold;
-}
 
 
 
-/*****/
-/* contactar */
-/*****/
-.fondo-contactar{
+/*************/
+/* UBICACION */
+/*************/
+.fondo-ubicacion{
   background-color: #26235E;
   padding: 3em 5em 3em 5em;
  }
-  
-  
-  
-  /* Estilos para HorariosDeAtencion.css */
-  .horarios-container {
-    /* border-top: solid 5px rgb(234, 4, 78); */
-    /* background-color: #FF003D; */
-    background-color: #26235E;
-    color: #ffffff;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  .text-center {
-    text-align: center;
-  }
-  h1 {
-    font-size: 2.6em;
-    /* color: #ffffff; */
-    color: #ffc107;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  .horarios-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-direction: column; */
-  }
-  
-  .horarios-info p {
-    font-size: 1.5rem;
-    margin: 10px 0;
-  }
-  .horario-item h2, p {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-
+.fondo-ubicacion iframe{
+  border: solid 2px #fafafa;
+}
   footer {
     background-color: rgb(226, 29, 38); 
     color: #fff;
     text-align: center;
     padding: 10px;
   }
-/* Otros estilos según sea necesario */
-
-.horarios-infoo {
-  display: flex;
-  justify-content: space-around; /* Opcional: puedes probar con 'space-between' para más espacio entre los elementos */
-  max-height: 200px; /* Ajusta la altura máxima según tus necesidades */
-  overflow: hidden; /* Para ocultar cualquier desbordamiento del contenido */
-}
-
-.horario-item {
-  text-align: center;
-  width: 100%; /* Esto asegura que ambos elementos ocupen el mismo ancho */
-  box-sizing: border-box; /* Asegura que el ancho incluya el relleno y el borde */
-}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  /***************/
+  /* MEDIA CUIRE */
+  /***************/
 /* probando */
 @media (max-width: 1212px) {
   .menu-container {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
 
 
 @media (max-width: 1200px) {
@@ -601,4 +633,6 @@ border-radius: 25px;
   .menu-container {
     grid-template-columns: 1fr;
   }
+
+ 
 }

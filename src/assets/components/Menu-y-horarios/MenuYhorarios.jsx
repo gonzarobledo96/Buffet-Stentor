@@ -23,6 +23,13 @@ function MenuSection() {
     Empanadasjq: null,
     EmpanadasPollo: null,
     EmpanadasCarne: null,
+    MedialunaManteca: null,
+    MedialunaJamonQueso: null,
+
+    Pancho: null,
+    tostadoArabe: null,
+    tostadoArabeCompleto: null,
+    BebidaAquariusPera: null,
 
     // ... otros elementos de menú
   });
@@ -55,6 +62,13 @@ document.querySelectorAll('.menu button').forEach((button) => {
     Empanadasjq: null,
     EmpanadasPollo: null,
     EmpanadasCarne: null,
+    MedialunaManteca: null,
+    MedialunaJamonQueso: null,
+
+    Pancho: null,
+    tostadoArabe: null,
+    tostadoArabeCompleto: null,
+    BebidaAquariusPera: null,
     // ... otros elementos de menú
   });
 
@@ -109,7 +123,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
         <div className="fondoDeLosPrecios">
           <div className="menu-container">
     <div className='menu-item pizzaMusarela'>
-  <img src="/src/assets/components/img/pizza-huevo.webp" alt="Pizza" />
+  <img src="/src/assets/components/img/pizza-muzzarella - copia.jpeg" alt="Pizza" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -127,7 +141,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   {mensajes.pizzaMusarela && <div className="mensaje-temporal">{mensajes.pizzaMusarela}</div>}
   <div >
     <h3>Pizza Mozza</h3>
-    <p className='condimentos'>Queso, orégano, aceitunas, provenzal  </p>
+    <p className='condimentos'>Queso, orégano, aceitunas, provenzal<strong className=' text-white'>texto-aline-atexto-alinea</strong></p>
     {/* <br /> */}
     <p className="price">$3.600</p>
     <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
@@ -140,7 +154,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
 </div>
 
 <div className='menu-item pizzaJamon'>
-  <img src="/src/assets/components/img/pizza-huevo.webp" alt="Pizza" />
+  <img src="/src/assets/components/img/pizza-jamon - copia.jpeg" alt="Pizza" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -158,7 +172,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   {mensajes.pizzaJamon && <div className="mensaje-temporal">{mensajes.pizzaJamon}</div>}
   <div>
     <h3>Pizza Jamon</h3>
-    <p className='condimentos'>Queso, jamon, orégano, aceitunas, provenzal </p>
+    <p className='condimentos'>Queso, jamon, orégano, aceitunas, provenzal <strong className=' text-white'>texto-alinea</strong></p>
     
     <p className="price">$3.600</p>
     <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
@@ -184,7 +198,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   {mensajes.pizzaNapolitana && <div className="mensaje-temporal">{mensajes.pizzaNapolitana}</div>}
   <div>
   <h3>Pizza Napo</h3>
-      <p className='condimentos'>Queso, tomate, orégano, aceitunas, provenzal</p>
+      <p className='condimentos'>Queso, tomate, orégano, aceitunas, provenzal<strong className=' text-white'>texto-alinea</strong></p>
       <p className="price">$4.400</p>
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
@@ -210,7 +224,8 @@ document.querySelectorAll('.menu button').forEach((button) => {
   {mensajes.pizzaHuevo && <div className="mensaje-temporal">{mensajes.pizzaHuevo}</div>}
   <div>
   <h3>Pizza huevo</h3>
-      <p className='condimentos'>Queso, huevo, orégano, aceitunas, provenzal</p>
+      <p className='condimentos'>Queso, huevo, orégano, aceitunas, provenzal <strong className=' text-white'>texto-aline-atexto-alinea</strong></p>
+      
       {/* <br /> */}
       <p className="price">$4.600</p>
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
@@ -219,7 +234,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
 
 
 <div className='menu-item pizzaStentor'>
-<img src="/src/assets/components/img/pizza-huevo.webp" alt="Pizza" />
+<img src="/src/assets/components/img/pizza-stentor - copia.jpeg" alt="Pizza" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -237,7 +252,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   {mensajes.pizzaStentor && <div className="mensaje-temporal">{mensajes.pizzaStentor}</div>}
   <div>
       <h3>Pizza Stentor</h3>
-      <p className='condimentos'>Queso, huevo frito, papas fritas, orégano, provenzal.</p>
+      <p className='condimentos'>Queso, huevo frito, papas fritas, orégano, provenzal <strong className=' text-white'>texto-alinea</strong></p>
       <p className="price">$4.600</p>
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
     </div>
@@ -269,7 +284,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   </div>
   {mensajes.HamburguesaClasica && <div className="mensaje-temporal">{mensajes.HamburguesaClasica}</div>}
   <div>
-  <h3 className=' align-items-center'>Hamburguesa sola con papas fritas</h3>
+  <h3 className=' align-items-center '>Hamburguesa sola con papas fritas</h3>
       {/* <p>Queso, tomate, orégano, aceitunas, provenzal.</p> */}
       <p className="price">$4.400</p>
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
@@ -278,7 +293,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
 
 
 <div className='menu-item HamburguesaCompleta'>
-  <img src="/src/assets/components/img/hamburguesa-completa.webp" alt="Hamburguesa" />
+  <img src="/src/assets/components/img/hamburguesa-huevo - copia.jpeg" alt="Hamburguesa" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -393,7 +408,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
             <div className="fondoDeLosPrecios">
         <div className="menu-container">
   <div className='menu-item Empanadasjq'>
-  <img src="/src/assets/components/img/empanadas-de-jamon-queso.webp" alt="empanadas de jamon y queso" />
+  <img src="/src/assets/components/img/empanadas-de-j-q - copia.jpeg" alt="empanadas de jamon y queso" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -446,7 +461,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
 
 
 <div className='menu-item EmpanadasCarne'>
-<img src="/src/assets/components/img/empanadas-de-carne.webp" alt="empanadas de carne" />
+<img src="/src/assets/components/img/empanadas-de-carne - copia.jpeg" alt="empanadas de carne" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -470,8 +485,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
 </div>
-
- 
 </div>
       </div>
           );
@@ -480,24 +493,63 @@ document.querySelectorAll('.menu button').forEach((button) => {
             content = (
               <div className="fondoDeLosPrecios">
           <div className="menu-container">
-    <div className="menu-item">
-      <img src="/src/assets/components/img/medialunas-de-manteca.webp" alt="Medialunas" />
-      <div>
-        <h3>Medialunas de manteca</h3>
-        {/* <p>Queso, orégano, aceitunas, provenzal.</p> */}
-        <p className="price">$500</p>
-        <button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button>
-      </div>
-    </div>
-    <div className="menu-item">
-      <img src="/src/assets/components/img/medialunas-de-jamon-y-queso.webp" alt="Medialunas de jamon y queso" />
-      <div>
-        <h3>Medialunas de jamon y queso</h3>
-        {/* <p>Queso, jamon, orégano, aceitunas, provenzal.</p> */}
-        <p className="price">$900</p>
-        <button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button>
-      </div>
-    </div>
+    <div className='menu-item MedialunaManteca'>
+    <img src="/src/assets/components/img/medialunas-jamon-queso.jpeg" alt="Medialunas" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.MedialunaManteca >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'MedialunaManteca')}
+        onMouseOut={() => handleStarLeave('MedialunaManteca')}
+        onClick={() => handleStarClick(valor, 'MedialunaManteca')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.MedialunaManteca || '5'}</p>
+  </div>
+  {mensajes.MedialunaManteca && <div className="mensaje-temporal">{mensajes.MedialunaManteca}</div>}
+  <div>
+  <h3>Medialunas de manteca</h3>
+  <p className="price">$500</p>
+  {/* <p>Musarela, jamon y tomate</p>  */}
+  
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+<div className='menu-item MedialunaJamonQueso'>
+<img src="/src/assets/components/img/medialunas-jamon-queso.jpeg" alt="Medialunas de jamon y queso" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.MedialunaJamonQueso >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'MedialunaJamonQueso')}
+        onMouseOut={() => handleStarLeave('MedialunaJamonQueso')}
+        onClick={() => handleStarClick(valor, 'MedialunaJamonQueso')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.MedialunaJamonQueso || '5'}</p>
+  </div>
+  {mensajes.MedialunaJamonQueso && <div className="mensaje-temporal">{mensajes.MedialunaJamonQueso}</div>}
+  <div>
+  <h3>Medialunas de jamon y queso</h3>
+  <p className="price">$900</p>
+  {/* <p>Musarela, jamon y tomate</p>  */}
+  
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+
+
+   
+
+
+
+
   </div>
         </div>
             );
@@ -506,15 +558,38 @@ document.querySelectorAll('.menu button').forEach((button) => {
               content = (
                 <div className="fondoDeLosPrecios">
             <div className="menu-container">
-      <div className="menu-item">
-        <img src="/src/assets/components/img/pancho-clasico.webp" alt="Panchos" />
-        <div>
-          <h3>Pancho clasico</h3>
-           <p className='condimentos'>Aderezo y papas</p>
-          <p className="price">$800</p>
-          <button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button>
-        </div>
-      </div>
+      <div className='menu-item pancho'>
+      <img src="/src/assets/components/img/pancho-clasico.webp" alt="Panchos" />
+  <div className="rating">
+    {[1, 2, 3, 4, 5].map((valor, index) => (
+      <span
+        key={index}
+        className={`star ${votos.pancho >= valor ? 'votada' : ''}`}
+        onMouseOver={() => handleStarHover(valor, 'pancho')}
+        onMouseOut={() => handleStarLeave('pancho')}
+        onClick={() => handleStarClick(valor, 'pancho')}
+      >
+        &#9733;
+      </span>
+    ))}
+    <p className='porcentaje-valor-producto'>{votos.pancho || '5'}</p>
+  </div>
+  {mensajes.pancho && <div className="mensaje-temporal">{mensajes.pancho}</div>}
+  <div>
+  <p className='condimentos'>Aderezo y papas</p>
+  <p className="price">$900</p>
+      <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
     </div>
           </div>
               );
@@ -573,6 +648,16 @@ document.querySelectorAll('.menu button').forEach((button) => {
           <img src="/src/assets/components/img/aquarius-pomelo.webp" alt="Panchos" />
           <div>
             <h3>Aquarius de pomelo</h3>
+             {/* <p>Jamon y queso</p> */}
+            <p className="price">$700</p>
+            <button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button>
+          </div>
+        </div>
+
+        <div className="menu-item">
+          <img src="/src/assets/components/img/frappe.jpeg" alt="Panchos" />
+          <div>
+            <h3>FRAPPE</h3>
              {/* <p>Jamon y queso</p> */}
             <p className="price">$700</p>
             <button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button>

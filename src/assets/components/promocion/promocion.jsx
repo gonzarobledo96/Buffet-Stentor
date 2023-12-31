@@ -20,7 +20,7 @@ function Promocion() {
   date={fechaFinalizacion}
   renderer={({ days, hours, minutes, seconds, completed }) => (
     <div className="contador-regresivo">
-      <h3>¡Oferta Especial!</h3>
+      {/* <h3>¡Oferta Especial!</h3> */}
       <p>¡Aprovecha nuestra promoción antes de que termine!</p>
       {completed ? (
         <span>La promoción ha finalizado</span>
@@ -29,6 +29,7 @@ function Promocion() {
           Tiempo restante: {days}d {hours}h {minutes}m {seconds}s
         </span>
       )}
+      <p><a className="boton-whatsapp " href="https://api.whatsapp.com/send?phone=69115723&text=Hola%20sean%20Bienvenidos!" target="_blank" rel="noreferrer">Contactar por WhatsApp</a></p>
     </div>
   )}
 />
