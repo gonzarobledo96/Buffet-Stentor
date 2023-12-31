@@ -2,11 +2,15 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBurger, faPizzaSlice, faHotdog, faWineBottle,  faBreadSlice, faBacon, faCloud, faCoins} from '@fortawesome/free-solid-svg-icons';
 
-
+import imagen from '../img/pizza-jamon - copia.jpeg';
 
 
 // Componente reutilizable para cada pizza
 function MenuSection() {
+
+
+
+  
   const [selectedMenu, setSelectedMenu] = useState('Pizzas');
   
   const [mensajes, setMensajes] = useState({
@@ -154,7 +158,8 @@ document.querySelectorAll('.menu button').forEach((button) => {
 </div>
 
 <div className='menu-item pizzaJamon'>
-  <img src="/src/assets/components/img/pizza-jamon - copia.jpeg" alt="Pizza" />
+  {/* <img src="/src/assets/components/img/pizza-jamon - copia.jpeg" alt="Pizza" /> */}
+  <img src={imagen} alt="Descripción" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
