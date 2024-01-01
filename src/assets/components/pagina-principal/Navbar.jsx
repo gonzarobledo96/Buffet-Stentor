@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
  import { useState } from 'react';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
+import LogoStentor from '../img/LogoStentor.png';
+import PuertaStentor from '../img/puerta-de-stentor - copia.jpeg';
 
 
 
@@ -59,7 +61,9 @@ const PaginaPrincipal = () => {
             <li className="nav-item">
               <div id="logoresponsive">                 
               <figure>
-                <a href="#"><img src="/src/assets/components/img/descarga_preview_rev_1 (1).png" alt="inicio"></img></a>
+                <a href="#">
+                <img src={LogoStentor} alt="Descripción" />
+                </a>
               </figure>
             </div>
               <a
@@ -130,7 +134,7 @@ const PaginaPrincipal = () => {
       <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src="/src/assets/components/img/puerta-de-stentor - copia.jpeg" className="d-block w-100" alt="..."></img>
+      <img src={PuertaStentor} className="d-block w-100" alt="..." />
     </div>
 
      {/* <div className="carousel-item">
