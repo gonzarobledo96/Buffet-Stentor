@@ -159,7 +159,8 @@ body {
   border-bottom: solid 5px;
   border-color: rgb(226, 29, 38); 
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
-} 
+}
+
 .posicion-nav {
   justify-content: center;
  }
@@ -170,7 +171,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
-  margin: 8px 15px;
+  margin: 8px 10px;
   padding: 16px 8px 0px;
 }
 .diseño-texto-navbar {
@@ -248,10 +249,7 @@ body {
 /*******************/
 /* MENY Y HORARIOS */
 /*******************/
-.menu .menu-button{
-  border-bottom: solid 3px transparent;
-  transition: border-bottom 0.1s ease;
-}
+
 .menu .menu-button.selected {
   color: rgb(226, 29, 38); 
   border-bottom: solid 3px  rgb(226, 29, 38); 
@@ -357,14 +355,15 @@ display: grid;
 grid-template-columns: repeat(5, 1fr);/*  5 columnas con igual fracción del ancho */
 gap: 16px;
 }
-
-
-
 /********************/
 /* MENU DE LA CARTA */
 /********************/
 .iconos{
   font-size: 3em;
+}
+.menu .menu-button{
+  border-bottom: solid 3px transparent;
+  transition: border-bottom 0.1s ease;
 }
 .menu button {
   background-color: #fafafa;
@@ -587,21 +586,36 @@ padding: 3em 0em 0em 0em;
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
 /*************************************/
 /* FONDO Y ESTILOS PARA LOS HORARIOS */
 /*************************************/
 @media (max-width: 600px) {
+/********************/
+/* NAVBAR-PRINCIPAL */
+/********************/
+  .fondo-del-nav img{
+   width: 70%;
+    }
+/*************************************/
+/* FONDO Y ESTILOS PARA LOS HORARIOS */
+/*************************************/
+    .horario-item {
+  padding: 0px 10px;
+  }
   .fondo-principal{
     margin-top: 4em;
   }
 .horarios-container {
-    padding: 20px;
+    padding: 10px;
   }
    .horarios-container h1 {
    font-size: 1rem ;
 }
   .horarios-info p {
     font-size: 10px;
+    margin: 0px 0px;
   }
   .horario-item > h2{
     font-size: 1rem;
@@ -613,6 +627,73 @@ padding: 3em 0em 0em 0em;
     overflow-x: auto;
     white-space: nowrap;
   }
+  
+  .menu button {
+    margin: 18px 6px 0px 6px;
+}
+.menu-horario{
+  font-size: 10px;
+}
+.menu-container {
+  /* grid-template-columns: 1fr; */
+  /* white-space: nowrap; */
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.fondoDeLosPrecios {
+  margin: 1em;
+}
+/********************/
+/* MENU DE LA CARTA */
+/********************/
+.iconos{
+  font-size: 1em;
+}
+
+.menu-item{
+  padding: 10px;
+  /* width: 70%; */
+}
+.menu-item h3 {
+  font-size: 14px;
+  display: flex;
+justify-content: center;
+  text-align: center;
+}
+
+.price {
+  
+  font-size: 1.5em;
+}
+.menu-item img {
+  
+  height: 100;
+  }
+  .star {
+    font-size: 20px;
+  }
+  .porcentaje-valor-producto{
+    font-size: 10px;
+    padding: 4px 8px;
+   
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*******************/
 /* Promociones.css */
 /*******************/
@@ -650,10 +731,6 @@ padding: 3em 0em 0em 0em;
 
 
 
-  .menu-container {
-    grid-template-columns: 1fr;
-    /* white-space: nowrap; */
-  }
-
+  
  
 }
