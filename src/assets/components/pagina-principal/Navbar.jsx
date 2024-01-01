@@ -6,6 +6,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import LogoStentor from '../img/LogoStentor.png';
 import PuertaStentor from '../img/puerta-de-stentor - copia.jpeg';
+import BuffetStentorLetras from '../img/letras - copia.png';
 
 
 
@@ -30,7 +31,7 @@ const PaginaPrincipal = () => {
       <nav className="navbar navbar-expand-lg fondo-del-nav">
         
         <div className="container-fluid">
-        <img src="/src/assets/components/img/letras - copia.png" alt="" />
+        <img src={BuffetStentorLetras} alt="BuffetStentorLetras" />
         <div className="navbar-toggler hamburger" 
   type="button"
   data-bs-toggle="collapse"
