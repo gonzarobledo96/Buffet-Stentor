@@ -6,7 +6,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import LogoStentor from '../img/LogoStentor.png';
 import PuertaStentor from '../img/puerta-de-stentor - copia.jpeg';
-import BuffetStentorLetras from '../img/tt.jpg';
+import BuffetStentorLetras from '../img/BuffetStentorLetras.jpg';
 
 
 
