@@ -5,6 +5,13 @@ import ImagenGaleriaTres from '../img/unnamed3.jpg';
 import ImagenGaleriaCuatro from '../img/unnamed4.jpg';
 
 function Galeria() {
+  // const imagenes = [
+  //   '../img/unnamed.jpg',
+  //   '../img/unnamed2.jpg',
+  //   '../img/unnamed3.jpg',
+  //   '../img/unnamed4.jpg',
+  // ];
+
   const imagenes = [
     ImagenGaleriaUno,
     ImagenGaleriaDos,

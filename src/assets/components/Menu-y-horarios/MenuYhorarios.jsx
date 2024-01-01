@@ -7,6 +7,16 @@ import ImagenPizzaJamon from '../img/pizza-jamon - copia.jpeg';
 import ImagenPizzaNapo from '../img/pizza-stentor - copia.jpeg';
 import ImagenPizzaHuevo from '../img/pizza-huevo.webp';
 import ImagenPizzaStentor from '../img/pizza-stentor - copia.jpeg';
+import ImagenHamburguesaUno from '../img/hamburguesa-huevo - copia.jpeg';
+import ImagenHamburguesaDos from '../img/hamburguesa-completa.webp';
+import ImagenMilanesaClasica from '../img/milanesa-clasica.webp';
+import ImagenMilanesaNapolitana from '../img/Milanesa-napolitana.webp';
+import ImagenMilanesaCaballo from '../img/Milanesa-a-caballo.webp';
+import ImagenEmpanadaJyQ from '../img/empanadas-de-j-q - copia.jpeg';
+import ImagenEmpanadaPollo from '../img/empanadas-de-carne - copia.jpeg';
+import ImagenMelialunaJyQ from '../img/medialunas-jamon-queso.jpeg';
+import ImagenPanchos from '../img/pancho-clasico.webp';
+import ImagenTostadas from '../img/Tostado-pan-Arabe.webp';
 
 
 
@@ -156,11 +166,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
     {/* <br /> */}
     <p className="price">$3.600</p>
     <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
-
-  {/* <div className=' mt-2'>
-  <a  href="https://api.whatsapp.com/send?phone=69115723&text=Hola%20sean%20Bienvenidos!" target="_blank" rel="noopener noreferrer"><button className='boton-whatsapp'>Consultar WhatsApp</button></a>
-  </div> */}
-
   </div>
 </div>
 
@@ -248,7 +253,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
 
 
 <div className='menu-item pizzaStentor'>
-{/* <img src="/src/assets/components/img/pizza-stentor - copia.jpeg" alt="Pizza" /> */}
 <img src={ImagenPizzaStentor } alt="Descripción" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
@@ -282,7 +286,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
         <div className="fondoDeLosPrecios">
               <div className="menu-container">
   <div className='menu-item HamburguesaClasica'>
-  <img src="/src/assets/components/img/hamburguesa-completa.webp" alt="Hamburguesa" />
+  <img src={ImagenHamburguesaUno} alt="Hamburguesa" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -308,7 +312,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
 
 
 <div className='menu-item HamburguesaCompleta'>
-  <img src="/src/assets/components/img/hamburguesa-huevo - copia.jpeg" alt="Hamburguesa" />
+  <img src={ImagenHamburguesaDos} alt="Hamburguesa" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -340,7 +344,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
           <div className="fondoDeLosPrecios">
          <div className="menu-container">
   <div className='menu-item MilanesaClasica'>
-  <img src="/src/assets/components/img/milanesa-clasica.webp" alt="Milanesas" />
+  <img src={ImagenMilanesaClasica} alt="Milanesas" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -365,7 +369,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
 </div>
 
   <div className='menu-item MilanesaNapolitana'>
-  <img src="/src/assets/components/img/Milanesa-napolitana.webp" alt="Milanesas" />
+  <img src={ImagenMilanesaNapolitana} alt="Milanesas" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -390,7 +394,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
 </div>
 
   <div className='menu-item MilanesaCaballo'>
-  <img src="/src/assets/components/img/Milanesa-napolitana.webp" alt="Milanesas" />
+  <img src={ImagenMilanesaCaballo} alt="Milanesas" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -423,7 +427,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
             <div className="fondoDeLosPrecios">
         <div className="menu-container">
   <div className='menu-item Empanadasjq'>
-  <img src="/src/assets/components/img/empanadas-de-j-q - copia.jpeg" alt="empanadas de jamon y queso" />
+  <img src={ImagenEmpanadaJyQ} alt="Empanadas" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -449,7 +453,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
 </div>
 
   <div className='menu-item EmpanadasPollo'>
-  <img src="/src/assets/components/img/empanadas-de-pollo.webp" alt="empanadas de jamon y queso" />
+  <img src={ImagenEmpanadaPollo} alt="empanadas" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -476,7 +480,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
 
 
 <div className='menu-item EmpanadasCarne'>
-<img src="/src/assets/components/img/empanadas-de-carne - copia.jpeg" alt="empanadas de carne" />
+<img src={ImagenEmpanadaPollo} alt="empanadas" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -509,7 +513,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
               <div className="fondoDeLosPrecios">
           <div className="menu-container">
     <div className='menu-item MedialunaManteca'>
-    <img src="/src/assets/components/img/medialunas-jamon-queso.jpeg" alt="Medialunas" />
+    <img src={ImagenMelialunaJyQ} alt="Medialunas" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -534,7 +538,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   </div>
 </div>
 <div className='menu-item MedialunaJamonQueso'>
-<img src="/src/assets/components/img/medialunas-jamon-queso.jpeg" alt="Medialunas de jamon y queso" />
+<img src={ImagenMelialunaJyQ} alt="Medialunas" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -574,7 +578,8 @@ document.querySelectorAll('.menu button').forEach((button) => {
                 <div className="fondoDeLosPrecios">
             <div className="menu-container">
       <div className='menu-item pancho'>
-      <img src="/src/assets/components/img/pancho-clasico.webp" alt="Panchos" />
+      
+      <img src={ImagenPanchos} alt="Pancho" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -596,15 +601,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
     </div>
           </div>
               );
@@ -614,7 +610,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
                   <div className="fondoDeLosPrecios">
               <div className="menu-container">
         <div className="menu-item">
-          <img src="/src/assets/components/img/Tostado pan Arabe.webp" alt="Panchos" />
+        <img src={ImagenTostadas} alt="Arabe" />
           <div>
             <h3>Tostado Arabe</h3>
              <p className='condimentos'>Jamon y queso</p>
@@ -623,7 +619,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
           </div>
         </div>
         <div className="menu-item">
-          <img src="/src/assets/components/img/Tostado pan Arabe.webp" alt="Panchos" />
+        <img src={ImagenTostadas} alt="Arabe" />
           <div>
             <h3>Tostado Arabe completo</h3>
              <p className='condimentos'>Jamon, queso, tomate, huevos revueltos</p>
@@ -633,7 +629,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
         </div>
       </div>
             </div>
-            
                 );
                 break;
 
@@ -713,7 +708,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   className={`menu-button ${selectedMenu === 'Hamburguesas' ? 'selected' : ''}`}>
   <FontAwesomeIcon icon={faBurger} className="iconos fa-burger" />
   <div className="menu-horario">
-    BURGUERS
+    HAMBURGUESAS
   </div>
 </button>
 <button

@@ -5,7 +5,7 @@ function Promocion() {
 
 
  // Define la fecha de finalización de la promoción
- const fechaFinalizacion = new Date('2023-12-31T23:59:59');
+ const fechaFinalizacion = new Date('2024-01-07T23:59:59');
 
 
 

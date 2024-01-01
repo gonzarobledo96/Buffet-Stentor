@@ -19,7 +19,6 @@ body {
   display: inline-block;
   overflow: hidden;
   background-color: transparent;
-  /* border: solid 2px rgb(226, 29, 38); */
   border: none;
 }
 .hamburger__container {
@@ -27,25 +26,17 @@ body {
   height: 24px;
   position: relative;
 }
-
-
-
 .hamburger__inner {
  display: flex;
   justify-content: center;
   font-size: 1.5em;
   color: rgb(226, 29, 38); 
 }
-
-
-
 .posicion-nav.collapse.show {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
 /* SI ELIMINO ESTO EL LOGO SE PONE EN EL CENTRO */
 /* Si los elementos son listas <li> dentro de un <ul>, puedes aplicar estilos así: */
 /* .posicion-nav.collapse.show ul.navbar-nav {
@@ -63,9 +54,6 @@ body {
   display: block; /* Para que ocupe el ancho completo */
   text-align: center;
 }
-
-
-
   /* LOGO DE WHATSAPP */
   .float {
       position: fixed;
@@ -121,7 +109,6 @@ body {
   height: 50px;
   bottom: 120px;
   right: 20px;
-  /* background-color: #e4405f;  */
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   color: #FFF;
   border-radius: 50px;
@@ -167,12 +154,6 @@ body {
 /********************/
 /* NAVBAR-PRINCIPAL */
 /********************/
-.inicio {
-  /* background: url("/src/assets/components/img/puerta-de-stentor\ -\ copia.jpeg");
-  background-size: cover;
-  background-position: center center;
-  height: 100vh; */
-}
  .fondo-del-nav {
   background-color: white;
   border-bottom: solid 5px;
@@ -181,13 +162,10 @@ body {
 } 
 .posicion-nav {
   justify-content: center;
-  /* padding-left: 10%;
- padding-right: 10%; */
  }
 .logo-transporte-escolar {
   margin-top: -10px;
 }
-/* padding: 0px 0px 0px 0px; */
 .nav-item a {
   text-decoration: none;
   font-weight: 600;
@@ -210,22 +188,6 @@ body {
   color: rgb(226, 29, 38);
   border-bottom: solid 2px rgb(226, 29, 38);
 }
-  /* #barramenu {
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    justify-content: space-between;
-    padding-left: 2.2em;
-    padding-right: 2.2em;
-   
-    padding-bottom: 4em;
-    background-color: white;
-    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
-    top: 0;
-    border-bottom: solid 5px;
-    border-color: rgb(226, 29, 38); 
-    z-index: 1000;
-  } */
       #logoresponsive {
         position: fixed;
     }
@@ -289,7 +251,6 @@ body {
 .menu .menu-button{
   border-bottom: solid 3px transparent;
   transition: border-bottom 0.1s ease;
-  /* padding: 1em; */
 }
 .menu .menu-button.selected {
   color: rgb(226, 29, 38); 
@@ -303,13 +264,12 @@ body {
   padding: 10px;
   margin-bottom: 20px;
   border: 3px solid transparent; /* Establece un borde transparente por defecto */
-  /* box-shadow: 0 8px 16px rgb(35 31 32/6%); */
+ 
   border-radius: 25px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .menu-item:hover {
   border-color: rgb(204, 204, 204); /* Cambia el color del borde en el hover */
-  /* border-color: rgba(226, 29, 39, 0.658);   */
 }
 .menu-item h3 {
   padding-top: 10px;
@@ -362,7 +322,6 @@ border-radius: 25px;
   font-size: 12px;
   color: white;
   font-weight: 600;
-  /* background-color: #e44d26; */
   background-color: rgb(226, 29, 38); 
   margin-top: 5px;
   padding: 8px 14px;
