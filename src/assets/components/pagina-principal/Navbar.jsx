@@ -131,7 +131,7 @@ const PaginaPrincipal = () => {
         </div>
       </div> */}
 
-      <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+      <div id="carouselExampleControls" className="carousel slide fondo-principal" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
       <img src={PuertaStentor} className="d-block w-100" alt="..." />

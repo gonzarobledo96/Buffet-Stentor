@@ -694,7 +694,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
     </div> */}
     
     <div id="MenuYhorarios" className='menu'>
-      <div className=' text-center'>
+      <div className='logos-menu text-center'>
       <button
   onClick={() => handleMenuItemClick('Pizzas')}
   className={`menu-button ${selectedMenu === 'Pizzas' ? 'selected' : ''}`}

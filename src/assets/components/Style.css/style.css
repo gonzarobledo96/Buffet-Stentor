@@ -587,10 +587,72 @@ padding: 3em 0em 0em 0em;
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
+/*************************************/
+/* FONDO Y ESTILOS PARA LOS HORARIOS */
+/*************************************/
 @media (max-width: 600px) {
+  .fondo-principal{
+    margin-top: 4em;
+  }
+.horarios-container {
+    padding: 20px;
+  }
+   .horarios-container h1 {
+   font-size: 1rem ;
+}
+  .horarios-info p {
+    font-size: 10px;
+  }
+  .horario-item > h2{
+    font-size: 1rem;
+  }
+/*******************/
+/* MENY Y HORARIOS */
+/*******************/
+  .menu .logos-menu{
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+/*******************/
+/* Promociones.css */
+/*******************/
+/* esto lo agregue para ver como queda el contador */
+.promociones{
+  height: 30vh;
+  padding: 170px 10px 10px 10px;
+}
+.promociones-container {
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.promocion-imagen {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.contador-regresivo {
+  text-align: center;
+}
+.contador-regresivo p {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+/* Estilos para el contador regresivo de react-countdown */
+.tiempo-restante {
+  font-size: 10px;
+  background-color: #ececec;
+  border-radius: 25px;
+  padding: 15px;
+ 
+}
+
+
+
+
   .menu-container {
     grid-template-columns: 1fr;
+    /* white-space: nowrap; */
   }
 
  
