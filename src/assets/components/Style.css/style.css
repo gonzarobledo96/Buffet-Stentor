@@ -10,6 +10,10 @@ body {
   
 
 
+
+  
+
+
 /* *********************/
 /* MENU HAMBURGUESA ****/
 /* *********************/
@@ -257,86 +261,6 @@ body {
 .fondoDeLosPrecios{
   margin: 3em ;  
 }
-
-
-.card{
-  background-color: #fff;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 3px solid transparent; /* Establece un borde transparente por defecto */
- 
-  border-radius: 25px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-.card:hover {
-  border-color: rgb(204, 204, 204); /* Cambia el color del borde en el hover */
-}
-.card h3 {
-  padding-top: 10px;
-font-size: 1.5em;
-display: flex;
-justify-content: center;
-  text-align: center;
-}
-.card > div p {/*esto es para centrar verticalmente los párrafos dentro de su contenedor. ya que align-items y las propiedades relacionadas como display: flex y justify-content aplican principalmente a contenedores flexibles, no a elementos de bloque como los párrafos. */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.card img {
-  width: 100%;
-  height: 150;
-  margin-right: 20px;
-  border-radius: 25px;
-  }
-  .card .condimentos{
-    padding-top: 1em;
-    font-weight: 600;
-    color: #555;
-  }
-  .card .boton-verEnPedidosYa{
-      width: 100%;
-    background-color: rgb(234, 4, 78);
-    color: white;
-    border: none;
-     padding: 8px 16px;
-     margin: 0px 0px;
-    text-decoration: none;
-    font-size: 14px;
-    cursor: pointer;
-    border: 1px solid transparent; /* Establece un borde transparente por defecto */
-    border-radius: 25px;
-  }
-  .card .boton-verEnPedidosYa:hover{
-    background-color:  white;
-    color: rgb(234, 4, 78);
-    border: solid 1px;
-  }
-  .card .boton-whatsapp{
-    width: 100%;
-    background-color: #25d366;
-  color: white;
-  border: none;
-   padding: 8px 16px;
-   margin: 0px 0px;
-  text-decoration: none;
-  font-size: 14px;
-  cursor: pointer;
-  border: 1px solid transparent; /* Establece un borde transparente por defecto */
-  border-radius: 25px;
-  }
-  .card .boton-whatsapp:hover{
-  background-color:  white;
-  color: #25d366;
-  border: solid 1px;
-  }
-
-
-
-
-
-
 .menu-item {
   background-color: #fff;
   padding: 10px;
@@ -719,9 +643,13 @@ padding: 3em 0em 0em 0em;
   gap: 16px;
   overflow-x: auto;
 }
-
-
-
+/* BARRA DE SCROOL DEL MENU Y DE LA CARTA */
+.menu-container::-webkit-scrollbar {
+  background-color: #ffffff;
+}
+ .logos-menu::-webkit-scrollbar {
+  background-color: #ffffff;
+}
 .fondoDeLosPrecios {
   margin: 1em;
 }
@@ -731,26 +659,12 @@ padding: 3em 0em 0em 0em;
 .iconos{
   font-size: 1em;
 }
-
-.menu-item{
-  /* padding: 10px; */
-  /* width: 70%; */
-}
 .menu-item h3 {
   font-size: 14px;
-  display: flex;
-justify-content: center;
-  text-align: center;
 }
-
 .price {
-  
   font-size: 1.5em;
 }
-/* .menu-item img {
-  
-  height: 100;
-  } */
   .star {
     font-size: 20px;
   }
@@ -762,29 +676,8 @@ justify-content: center;
 /* BOTON DE PEDIDOS YA */
 .menu-item .condimentos{
   padding-top: 1em;
-  font-weight: 600;
-  color: #555;
   font-size: 14px;
-  
 }
-.menu-item > div p {/*esto es para centrar verticalmente los párrafos dentro de su contenedor. ya que align-items y las propiedades relacionadas como display: flex y justify-content aplican principalmente a contenedores flexibles, no a elementos de bloque como los párrafos. */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  
-}
-
-
-
-
-
-
-
-
-
-
-
 /*******************/
 /* Promociones.css */
 /*******************/

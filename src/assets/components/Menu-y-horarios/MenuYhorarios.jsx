@@ -161,8 +161,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   {mensajes.pizzaMusarela && <div className="mensaje-temporal">{mensajes.pizzaMusarela}</div>}
   <div >
     <h3>Pizza Muzza</h3>
-     <p className='condimentos'>Queso, orégano, aceitunas, provenzal<strong className=' text-white'>texto-aline-atexto-alinea</strong></p> 
-    {/* <br /> */}
+     <p className='condimentos'>Queso, orégano, aceitunas, provenzal<strong className=' text-white'>Provenzal</strong></p> 
     <p className="price">$3.600</p>
     <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
@@ -192,7 +191,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   {mensajes.pizzaJamon && <div className="mensaje-temporal">{mensajes.pizzaJamon}</div>}
   <div>
     <h3>Pizza Jamon</h3>
-    <p className='condimentos'>Queso, jamon, orégano, aceitunas, provenzal <strong className=' text-white'>texto-alinea</strong></p>
+    <p className='condimentos'>Queso, jamon, orégano, aceitunas, provenzal {/* <strong className=' text-white'>texto-alinea</strong> */}</p>
     
     <p className="price">$3.600</p>
     <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
@@ -219,7 +218,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   {mensajes.pizzaNapolitana && <div className="mensaje-temporal">{mensajes.pizzaNapolitana}</div>}
   <div>
   <h3>Pizza Napo</h3>
-      <p className='condimentos'>Queso, tomate, orégano, aceitunas, provenzal<strong className=' text-white'>texto-alinea</strong></p>
+      <p className='condimentos'>Queso, tomate, orégano, aceitunas, provenzal{/* <strong className=' text-white'>texto-alinea</strong> */}</p>
       <p className="price">$4.400</p>
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
@@ -227,7 +226,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
 
 
 <div className='menu-item pizzaHuevo'>
-{/* <img src="/src/assets/components/img/pizza-huevo.webp" alt="Pizza" /> */}
 <img src={ImagenPizzaHuevo} alt="Descripción" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
@@ -246,7 +244,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   {mensajes.pizzaHuevo && <div className="mensaje-temporal">{mensajes.pizzaHuevo}</div>}
   <div>
   <h3>Pizza huevo</h3>
-      <p className='condimentos'>Queso, huevo, orégano, aceitunas, provenzal <strong className=' text-white'>texto-aline-atexto-alinea</strong></p>
+      <p className='condimentos'>Queso, huevo, aceitunas, orégano<strong className=' text-white'>Provenzal</strong></p>
       
       {/* <br /> */}
       <p className="price">$4.600</p>
@@ -274,7 +272,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   {mensajes.pizzaStentor && <div className="mensaje-temporal">{mensajes.pizzaStentor}</div>}
   <div>
       <h3>Pizza Stentor</h3>
-      <p className='condimentos'>Queso, huevo frito, papas fritas, orégano, provenzal <strong className=' text-white'>texto-alinea</strong></p>
+      <p className='condimentos'>Queso, huevo frito, papas fritas, orégano, provenzal {/* <strong className=' text-white'>texto-alinea</strong> */}</p>
       <p className="price">$4.600</p>
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
     </div>
