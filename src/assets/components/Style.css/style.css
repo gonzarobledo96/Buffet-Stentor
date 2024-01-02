@@ -440,6 +440,7 @@ border: solid 1px;
   height: 100vh;
   /* padding: 100px; */
   padding: 470px 100px 100px 100px;
+  object-fit: cover;
 }
 .promociones-container {
   border-radius: 8px;
@@ -461,12 +462,8 @@ border: solid 1px;
 /* Estilos para el contador regresivo de react-countdown */
 .tiempo-restante {
   font-size: 1.7rem;
-  background-color: #ececec;
-  border-radius: 25px;
-  padding: 15px;
-  color: #26235E;
+  color: #ffffff;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -657,7 +654,7 @@ padding: 3em 0em 0em 0em;
 /* MENU DE LA CARTA */
 /********************/
 .iconos{
-  font-size: 1em;
+  font-size: 1.5em;
 }
 .menu-item h3 {
   font-size: 14px;
@@ -684,37 +681,73 @@ padding: 3em 0em 0em 0em;
 /* esto lo agregue para ver como queda el contador */
 .promociones{
   height: 30vh;
-  padding: 170px 10px 10px 10px;
-}
-.promociones-container {
-  border-radius: 8px;
-  margin-bottom: 20px;
+  padding: 100px 10px 10px 10px;
 }
 .promocion-imagen {
   max-width: 100%;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .contador-regresivo {
   text-align: center;
 }
 .contador-regresivo p {
   color: #ffffff;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
+  margin-bottom: 0px;
+  font-size: 10px;
 }
 /* Estilos para el contador regresivo de react-countdown */
 .tiempo-restante {
+  color: white;
   font-size: 10px;
-  background-color: #ececec;
-  border-radius: 25px;
-  padding: 15px;
- 
 }
-
-
-
-
-  
- 
+.boton-whatsapp {
+  width: 100%;
+  background-color: #25d366;
+color: white;
+ padding: 2px 12px;
+ margin: 0px 0px;
+text-decoration: none;
+font-size: 10px;
+cursor: pointer;
+border: 1px solid transparent; /* Establece un borde transparente por defecto */
+border-radius: 25px;
+}
+.boton-whatsapp:hover{
+  background-color:  white;
+  color: #25d366;
+  border: solid 1px #25d366;
+  }
+/***********/
+/* EVENTOS */
+/***********/
+.imagen-evento{
+    height: 60vh;
+    padding: 50px 20px 20px 20px;
+  }
+.titulo-evento h2{
+  font-size: 14px;
+}
+.titulo-evento p{
+  font-size: 10px;
+  color: #fff;
+ font-weight: 600;
+}
+/***************/
+/* Galeria.css */
+/***************/
+.galeria-container {
+  background-color: #ececec;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+/*************/
+/* UBICACION */
+/*************/
+.fondo-ubicacion {
+  background-color: #26235E;
+  padding:2em;
+}
 }
