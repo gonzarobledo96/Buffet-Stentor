@@ -447,6 +447,7 @@ border: solid 1px;
   margin-bottom: 20px;
 }
 .promocion-imagen {
+  height: auto;
   max-width: 100%;
   border-radius: 8px;
   margin-bottom: 20px;
