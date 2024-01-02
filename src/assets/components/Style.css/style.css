@@ -408,24 +408,6 @@ gap: 16px;
   color: rgb(234, 4, 78);
   border: solid 1px;
 }
-.menu-item .boton-whatsapp{
-  width: 100%;
-  background-color: #25d366;
-color: white;
-border: none;
- padding: 8px 16px;
- margin: 0px 0px;
-text-decoration: none;
-font-size: 14px;
-cursor: pointer;
-border: 1px solid transparent; /* Establece un borde transparente por defecto */
-border-radius: 25px;
-}
-.menu-item .boton-whatsapp:hover{
-background-color:  white;
-color: #25d366;
-border: solid 1px;
-}
 
 
 
@@ -434,19 +416,19 @@ border: solid 1px;
 /*******************/
 /* esto lo agregue para ver como queda el contador */
 .promociones{
-  background-image: url(/src/assets/components/img/fondo-promociones.png);
+  /* background-image: url(/src/assets/components/img/fondo-promociones.png);
   background-size: cover;
   background-position: center center;
-  height: 100vh;
+  height: 100vh; */
   /* padding: 100px; */
   /* padding: 420px 100px 100px 100px; */
-  padding: 400px 100px 100px 100px;
-  object-fit: cover;
+  /* padding: 400px 100px 100px 100px; */
+  /* object-fit: cover; */
   
 }
 .promociones-container {
-  border-radius: 8px;
-  margin-bottom: 20px;
+ padding: 10px;
+  background-color: #26235E;
 }
 .promocion-imagen {
   height: auto;
@@ -496,17 +478,18 @@ background-image: url(/src/assets/components/img/dsBuffer.jpg);
   background-color: #25d366;
 color: white;
  padding: 10px 20px;
- margin: 0px 0px;
 text-decoration: none;
-font-size: 14px;
+font-size: 1rem;
 cursor: pointer;
 border: 1px solid transparent; /* Establece un borde transparente por defecto */
 border-radius: 25px;
+transition: 0.2s;
 }
 .boton-whatsapp:hover{
   background-color:  white;
   color: #25d366;
   border: solid 1px #25d366;
+  transition: 0.2s;
   }
 
 
@@ -658,7 +641,7 @@ padding: 3em 0em 0em 0em;
 /* MENU DE LA CARTA */
 /********************/
 .iconos{
-  font-size: 1.5em;
+  font-size: 2em;
 }
 .menu-item h3 {
   font-size: 14px;
@@ -679,14 +662,13 @@ padding: 3em 0em 0em 0em;
   padding-top: 1em;
   font-size: 14px;
 }
+.menu-item .boton-verEnPedidosYa {
+  font-size: 10px;
+}
 /*******************/
 /* Promociones.css */
 /*******************/
 /* esto lo agregue para ver como queda el contador */
-.promociones{
-  height: 30vh;
-  padding: 150px 10px 10px 10px;
-}
 .promocion-imagen {
   max-width: 100%;
   border-radius: 8px;
@@ -702,7 +684,7 @@ padding: 3em 0em 0em 0em;
 }
 /* Estilos para el contador regresivo de react-countdown */
 .tiempo-restante {
-  color: white;
+  color: #ffffff;
   font-size: 10px;
 }
 .boton-whatsapp {
@@ -726,8 +708,8 @@ border-radius: 25px;
 /* EVENTOS */
 /***********/
 .imagen-evento{
-    height: 60vh;
-    padding: 50px 20px 20px 20px;
+    height: 40vh;
+    padding: 30px 20px 20px 20px;
   }
 .titulo-evento h2{
   font-size: 14px;
@@ -752,6 +734,6 @@ border-radius: 25px;
 /*************/
 .fondo-ubicacion {
   background-color: #26235E;
-  padding:2em;
+  padding:1.5em;
 }
 }

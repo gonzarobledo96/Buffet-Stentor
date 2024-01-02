@@ -1,6 +1,5 @@
 import Countdown from 'react-countdown';
-
-
+import ImagenGaleriaCuatro from '../img/fondo-promociones.png';
 function Promocion() {
 
 
@@ -12,6 +11,7 @@ function Promocion() {
  
   return (
 <div className='promociones mb-5' id="promociones">
+<img className=' w-100' src={ImagenGaleriaCuatro} alt="" />
 {/* Promocion */}
     <div className="promociones-container">
     {/* <img className=' w-100' src="/src/assets/components/img/promocion-slide-malibu-bar-en-cali.jpg" alt="" /> */}
