@@ -142,9 +142,8 @@ document.querySelectorAll('.menu button').forEach((button) => {
       content = (
         <div className="fondoDeLosPrecios">
           <div className="menu-container">
-    <div className='menu-item pizzaMusarela'>
-  {/* <img src="/src/assets/components/img/pizza-muzzarella - copia.jpeg" alt="Pizza" /> */}
-  <img src={ImagenPizzaMuzza} alt="Descripción" />
+<div className="menu-item pizzaMusarela" >
+ <img src={ImagenPizzaMuzza} alt="Descripción" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
       <span
@@ -162,15 +161,19 @@ document.querySelectorAll('.menu button').forEach((button) => {
   {mensajes.pizzaMusarela && <div className="mensaje-temporal">{mensajes.pizzaMusarela}</div>}
   <div >
     <h3>Pizza Muzza</h3>
-    <p className='condimentos'>Queso, orégano, aceitunas, provenzal<strong className=' text-white'>texto-aline-atexto-alinea</strong></p>
+     <p className='condimentos'>Queso, orégano, aceitunas, provenzal<strong className=' text-white'>texto-aline-atexto-alinea</strong></p> 
     {/* <br /> */}
     <p className="price">$3.600</p>
     <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
 </div>
 
+
+
+
+
+
 <div className='menu-item pizzaJamon'>
-  {/* <img src="/src/assets/components/img/pizza-jamon - copia.jpeg" alt="Pizza" /> */}
   <img src={ImagenPizzaJamon} alt="Descripción" />
   <div className="rating">
     {[1, 2, 3, 4, 5].map((valor, index) => (
@@ -477,7 +480,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
 </div>
-
 
 <div className='menu-item EmpanadasCarne'>
 <img src={ImagenEmpanadaPollo} alt="empanadas" />
