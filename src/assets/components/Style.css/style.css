@@ -632,7 +632,7 @@ padding: 3em 0em 0em 0em;
     white-space: nowrap;
   }
   .menu button {
-    margin: 18px 6px 0px 6px;
+    margin: 18px 6px 10px 6px;
 }
 .menu-horario{
   font-size: 10px;
@@ -645,10 +645,10 @@ padding: 3em 0em 0em 0em;
 }
 /* BARRA DE SCROOL DEL MENU Y DE LA CARTA */
 .menu-container::-webkit-scrollbar {
-  background-color: #ffffff;
+  background-color: #fafafa;
 }
  .logos-menu::-webkit-scrollbar {
-  background-color: #ffffff;
+  background-color: #fafafa;
 }
 .fondoDeLosPrecios {
   margin: 1em;
