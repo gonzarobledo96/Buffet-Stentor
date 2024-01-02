@@ -439,7 +439,7 @@ border: solid 1px;
   background-position: center center;
   height: 100vh;
   /* padding: 100px; */
-  padding: 470px 100px 100px 100px;
+  padding: 420px 100px 100px 100px;
   object-fit: cover;
 }
 .promociones-container {
@@ -456,6 +456,7 @@ border: solid 1px;
   text-align: center;
 }
 .contador-regresivo p {
+  font-weight: 600;
   color: #ffffff;
   margin-bottom: 20px;
   font-size: 1.5rem;
