@@ -427,22 +427,21 @@ gap: 16px;
   
 }
 .promociones-container {
- padding: 10px;
+ padding: 20px;
   background-color: #26235E;
 }
 .promocion-imagen {
   height: auto;
   max-width: 100%;
   border-radius: 8px;
-  margin-bottom: 20px;
 }
 .contador-regresivo {
   text-align: center;
 }
 .contador-regresivo p {
+  padding: 10px 0px;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 20px;
   font-size: 1.5rem;
 }
 /* Estilos para el contador regresivo de react-countdown */
@@ -477,7 +476,7 @@ background-image: url(/src/assets/components/img/dsBuffer.jpg);
   width: 100%;
   background-color: #25d366;
 color: white;
- padding: 10px 20px;
+ padding: 12px 22px;
 text-decoration: none;
 font-size: 1rem;
 cursor: pointer;
