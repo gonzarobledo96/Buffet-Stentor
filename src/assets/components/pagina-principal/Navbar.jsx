@@ -48,10 +48,11 @@ const PaginaPrincipal = () => {
   </div>
 </div>
           <div
-            className="collapse navbar-collapse "/* posicion-nav */
+          className="collapse navbar-collapse "
+            /* posicion-nav */
             id="navbarSupportedContent"
           >
-            <ul className=" navbar-nav">
+            <ul className=" navbar-nav ">
 
             <li className="nav-item espacio-logo-navbar">
               <div id="logoresponsive">                 

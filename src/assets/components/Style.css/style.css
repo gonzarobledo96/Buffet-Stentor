@@ -32,16 +32,6 @@ body {
   font-size: 1.5em;
   color: rgb(226, 29, 38); 
 }
-.posicion-nav.collapse.show {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* También puedes aplicar estilos directamente a los elementos <a> si no están dentro de un <ul>/<li> */
-.posicion-nav.collapse.show a {
-  display: block; /* Para que ocupe el ancho completo */
-  text-align: center;
-}
   .whatsapp-link {
      position: fixed;
      width: 50px;
@@ -125,10 +115,20 @@ body {
 
 
 
-
-.posicion-nav {
+.posicion-nav.collapse.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* También puedes aplicar estilos directamente a los elementos <a> si no están dentro de un <ul>/<li> */
+.posicion-nav.collapse.show a {
+  display: block; /* Para que ocupe el ancho completo */
+  text-align: center;
+}
+/* .posicion-nav {
   justify-content: center;
- }
+  
+ } */
  
 
 
@@ -534,9 +534,10 @@ padding: 3em 0em 0em 0em;
 /* NAVBAR-PRINCIPAL */
 /********************/
 
-/* .posicion-nav {
+ /* .posicion-nav {
   justify-content: center;
- } */
+  margin: 0 auto;
+ }  */
 
 
 
