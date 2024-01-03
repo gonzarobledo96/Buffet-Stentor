@@ -32,7 +32,7 @@ const PaginaPrincipal = () => {
         
         <div className="container-fluid">
         <img src={BuffetStentorLetras} alt="BuffetStentorLetras" />
-        <div className="navbar-toggler ms-auto hamburger" 
+        <div className="navbar-toggler hamburger" 
   type="button"
   data-bs-toggle="collapse"
   data-bs-target="#navbarSupportedContent"
@@ -53,7 +53,7 @@ const PaginaPrincipal = () => {
             className="collapse navbar-collapse posicion-nav"
             id="navbarSupportedContent"
           >
-            <ul className="navbar-nav">
+            <ul className="navbar-nav ">
 
             <li className="nav-item espacio-logo-navbar">
               <div id="logoresponsive">                 
@@ -170,9 +170,4 @@ const PaginaPrincipal = () => {
     </div>
     );
   };
-  
-
 export default  PaginaPrincipal;
-
-
-
