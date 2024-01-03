@@ -32,7 +32,7 @@ const PaginaPrincipal = () => {
         
         <div className="container-fluid">
         <img src={BuffetStentorLetras} alt="BuffetStentorLetras" />
-        <div className="navbar-toggler hamburger" 
+        <div className="navbar-toggler ms-auto hamburger" 
   type="button"
   data-bs-toggle="collapse"
   data-bs-target="#navbarSupportedContent"
