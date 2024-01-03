@@ -689,7 +689,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
 <button
   onClick={() => handleMenuItemClick('Empanadas')}
   className={`menu-button ${selectedMenu === 'Empanadas' ? 'selected' : ''}`}>
-  <FontAwesomeIcon icon={faCloud} className="iconos fa-solid fa-cloud" fade />
+  <FontAwesomeIcon icon={faCloud} className="iconos fa-solid fa-cloud" />
   <div className="menu-horario">EMPANADAS</div>
 </button>
 <button
