@@ -10,10 +10,6 @@ body {
   
 
 
-
-  
-
-
 /* *********************/
 /* MENU HAMBURGUESA ****/
 /* *********************/
@@ -41,25 +37,13 @@ body {
   flex-direction: column;
   align-items: center;
 }
-/* SI ELIMINO ESTO EL LOGO SE PONE EN EL CENTRO */
-/* Si los elementos son listas <li> dentro de un <ul>, puedes aplicar estilos así: */
-/* .posicion-nav.collapse.show ul.navbar-nav {
-  text-align: center;
-  width: 100%;  Asegura que ocupe el ancho completo 
-}
-
-.posicion-nav.collapse.show li.nav-item {
-  width: 100%;  Asegura que cada elemento ocupe el ancho completo 
-  text-align: center;
-} */
-
 /* También puedes aplicar estilos directamente a los elementos <a> si no están dentro de un <ul>/<li> */
 .posicion-nav.collapse.show a {
   display: block; /* Para que ocupe el ancho completo */
   text-align: center;
 }
   /* LOGO DE WHATSAPP */
-  .float {
+  /* .float {
       position: fixed;
       width: 60px;
       height: 60px;
@@ -83,8 +67,8 @@ body {
   }
   .my-float {
       margin-top: 16px;
-  }
-  .footer-link {
+  } */
+  .whatsapp-link {
      position: fixed;
      width: 50px;
      height: 50px;
@@ -100,14 +84,14 @@ body {
       transition: 0.5s;
       line-height: 50px; /* Centra verticalmente el contenido */
   }
-  .footer-link:hover {
+  .whatsapp-link:hover {
     text-decoration: none;
     color: #25d366;
     background-color: #fff;
     transition: 0.4s;
     transform: scale(1.2)
  }
- .footer-link-ig {
+ .whatsapp-link-ig {
   position: fixed;
   width: 50px;
   height: 50px;
@@ -123,11 +107,11 @@ body {
   transition: 0.5s;
   line-height: 50px; /* Centra verticalmente el contenido */
 }
-.footer-link-ig:hover {
+.whatsapp-link-ig:hover {
   transition: 0.5s;
   transform: scale(1.2);
 }
-.footer-link-py {
+.whatsapp-link-py {
   position: fixed;
   text-decoration: none;
   width: 50px;
@@ -145,7 +129,7 @@ body {
   transition: 0.5s;
   line-height: 50px; /* Centra verticalmente el contenido */
 }
-.footer-link-py:hover {
+.whatsapp-link-py:hover {
   text-decoration: none;
   color: #FF003D;
   background-color: #fff;
@@ -176,7 +160,6 @@ body {
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
   margin: 8px 10px;
-  padding: 16px 8px 0px;
 }
 .diseño-texto-navbar {
   padding-top: 1rem;
@@ -414,18 +397,6 @@ gap: 16px;
 /*******************/
 /* Promociones.css */
 /*******************/
-/* esto lo agregue para ver como queda el contador */
-.promociones{
-  /* background-image: url(/src/assets/components/img/fondo-promociones.png);
-  background-size: cover;
-  background-position: center center;
-  height: 100vh; */
-  /* padding: 100px; */
-  /* padding: 420px 100px 100px 100px; */
-  /* padding: 400px 100px 100px 100px; */
-  /* object-fit: cover; */
-  
-}
 .promociones-container {
  padding: 20px;
   background-color: #26235E;
@@ -573,8 +544,6 @@ padding: 3em 0em 0em 0em;
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-
 /*************************************/
 /* FONDO Y ESTILOS PARA LOS HORARIOS */
 /*************************************/
@@ -582,9 +551,23 @@ padding: 3em 0em 0em 0em;
 /********************/
 /* NAVBAR-PRINCIPAL */
 /********************/
+.nav-item a {
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  margin: 8px 10px;
+  padding: 10px 8px 0px;
+}
   .fondo-del-nav img{
    width: 70%;
     }
+    #logoresponsive {
+      position: fixed;
+  }
+  #logoresponsive img {
+    margin-left: 10px;
+    max-width: 40%; /* La imagen no puede ser más ancha que su contenedor */
+}
 /*************************************/
 /* FONDO Y ESTILOS PARA LOS HORARIOS */
 /*************************************/
@@ -654,7 +637,6 @@ padding: 3em 0em 0em 0em;
   .porcentaje-valor-producto{
     font-size: 10px;
     padding: 4px 8px;
-   
   }
 /* BOTON DE PEDIDOS YA */
 .menu-item .condimentos{

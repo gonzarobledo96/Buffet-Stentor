@@ -68,7 +68,7 @@ const PaginaPrincipal = () => {
               </figure>
             </div>
               <a
-                className="nav-link diseño-texto-navbar"
+                className="nav-link "
                 href="#trayectoria"
                 rel="noopener noreferrer"
                 style={{ color: 'white' }}>
@@ -158,16 +158,16 @@ const PaginaPrincipal = () => {
 </div>
 
 {/* Logo de whatsapp y instagram */}
-<div className="footer-container">
+<div className="whatsapp-container">
   
-      <a  href="https://api.whatsapp.com/send?phone=69115723&text=Hola%20sean%20Bienvenidos!" target="_blank" className="footer-link" rel="noreferrer">
+      <a  href="https://api.whatsapp.com/send?phone=69115723&text=Hola%20sean%20Bienvenidos!" target="_blank" className="whatsapp-link" rel="noreferrer">
         <FontAwesomeIcon icon={faWhatsapp}  />
       </a>
-      <a href="enlace-de-instagram" target="_blank" className="footer-link-ig">
+      <a href="enlace-de-instagram" target="_blank" className="whatsapp-link-ig">
         <FontAwesomeIcon icon={faInstagram}  />
       </a>
 
-      <a  href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" className="footer-link-py" rel="noreferrer">
+      <a  href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" className="whatsapp-link-py" rel="noreferrer">
         <p>PY</p>
       </a>
     </div>

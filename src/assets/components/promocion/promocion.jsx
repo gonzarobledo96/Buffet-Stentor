@@ -7,8 +7,6 @@ function Promocion() {
  const fechaFinalizacion = new Date('2024-01-07T23:59:59');
 
 
-
- 
   return (
 <div className='promociones mb-5' id="promociones">
 <img className=' w-100' src={ImagenGaleriaCuatro} alt="" />
@@ -35,9 +33,6 @@ function Promocion() {
 />
       </div>
     </div>
-
-
-
 </div>
   );
 }
