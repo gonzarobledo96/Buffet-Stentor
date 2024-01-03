@@ -25,8 +25,6 @@ const PaginaPrincipal = () => {
     return (
       <div className="inicio" id="inicio">
         {/* fondo del navbar */}
-        <section id="barramenu">
-    </section>
       <div className="fixed-top">
       <nav className="navbar navbar-expand-lg fondo-del-nav">
         
@@ -50,10 +48,10 @@ const PaginaPrincipal = () => {
   </div>
 </div>
           <div
-            className="collapse navbar-collapse posicion-nav"
+            className="collapse navbar-collapse "/* posicion-nav */
             id="navbarSupportedContent"
           >
-            <ul className=" navbar-nav text-center">
+            <ul className=" navbar-nav">
 
             <li className="nav-item espacio-logo-navbar">
               <div id="logoresponsive">                 
