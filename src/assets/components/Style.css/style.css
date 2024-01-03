@@ -106,6 +106,22 @@ body {
 /********************/
 /* NAVBAR-PRINCIPAL */
 /********************/
+
+.navbar-nav {
+  
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin-left: auto; /* Empuja los elementos del menú al centro */
+}
+
+.nav-link {
+  margin: 0 15px; /* Ajusta el espacio entre elementos del menú */
+  font-size: 16px; /* Tamaño de la fuente del menú */
+  text-decoration: none;
+}
+
+
  .fondo-del-nav {
   background-color: white;
   border-bottom: solid 5px;
@@ -125,10 +141,7 @@ body {
   display: block; /* Para que ocupe el ancho completo */
   text-align: center;
 }
-/* .posicion-nav {
-  justify-content: center;
-  
- } */
+
  
 
 
@@ -534,13 +547,6 @@ padding: 3em 0em 0em 0em;
 /* NAVBAR-PRINCIPAL */
 /********************/
 
- /* .posicion-nav {
-  justify-content: center;
-  margin: 0 auto;
- }  */
-
-
-
 .nav-item a {
   text-decoration: none;
   font-weight: 600;
@@ -548,9 +554,12 @@ padding: 3em 0em 0em 0em;
   margin: 8px 10px;
   padding: 10px 8px 0px;
 }
+
 .espacio-logo-navbar{
   margin-bottom: 3em;
-}
+} 
+
+
   .fondo-del-nav img{
    width: 70%;
     }
