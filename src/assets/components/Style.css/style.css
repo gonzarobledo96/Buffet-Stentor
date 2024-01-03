@@ -148,7 +148,6 @@ body {
   border-color: rgb(226, 29, 38); 
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
 }
-
 .posicion-nav {
   justify-content: center;
  }
@@ -236,7 +235,6 @@ body {
 /*******************/
 /* MENY Y HORARIOS */
 /*******************/
-
 .menu .menu-button.selected {
   color: rgb(226, 29, 38); 
   border-bottom: solid 3px  rgb(226, 29, 38); 
@@ -249,7 +247,6 @@ body {
   padding: 10px;
   margin-bottom: 20px;
   border: 3px solid transparent; /* Establece un borde transparente por defecto */
- 
   border-radius: 25px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -558,6 +555,9 @@ padding: 3em 0em 0em 0em;
   margin: 8px 10px;
   padding: 10px 8px 0px;
 }
+.espacio-logo-navbar{
+  margin-bottom: 3em;
+}
   .fondo-del-nav img{
    width: 70%;
     }
@@ -566,7 +566,7 @@ padding: 3em 0em 0em 0em;
   }
   #logoresponsive img {
     margin-left: 10px;
-    max-width: 40%; /* La imagen no puede ser más ancha que su contenedor */
+    max-width: 60%; /* La imagen no puede ser más ancha que su contenedor */
 }
 /*************************************/
 /* FONDO Y ESTILOS PARA LOS HORARIOS */
