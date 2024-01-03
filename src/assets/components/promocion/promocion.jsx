@@ -2,11 +2,8 @@ import Countdown from 'react-countdown';
 import ImagenGaleriaCuatro from '../img/fondo-promociones.png';
 function Promocion() {
 
-
  // Define la fecha de finalización de la promoción
  const fechaFinalizacion = new Date('2024-01-07T23:59:59');
-
-
   return (
 <div className='promociones mb-5' id="promociones">
 <img className=' w-100' src={ImagenGaleriaCuatro} alt="" />
@@ -36,5 +33,4 @@ function Promocion() {
 </div>
   );
 }
-
 export default Promocion;

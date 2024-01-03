@@ -18,17 +18,9 @@ import ImagenMelialunaJyQ from '../img/medialunas-jamon-queso.jpeg';
 import ImagenPanchos from '../img/pancho-clasico.webp';
 import ImagenTostadas from '../img/Tostado-pan-Arabe.webp';
 
-
-
-
 // Componente reutilizable para cada pizza
 function MenuSection() {
-
-
-
-  
   const [selectedMenu, setSelectedMenu] = useState('Pizzas');
-  
   const [mensajes, setMensajes] = useState({
     pizzaMusarela: null,
     pizzaJamon: null,
@@ -45,12 +37,10 @@ function MenuSection() {
     EmpanadasCarne: null,
     MedialunaManteca: null,
     MedialunaJamonQueso: null,
-
     Pancho: null,
     tostadoArabe: null,
     tostadoArabeCompleto: null,
     BebidaAquariusPera: null,
-
     // ... otros elementos de menú
   });
 
@@ -65,8 +55,6 @@ function MenuSection() {
 document.querySelectorAll('.menu button').forEach((button) => {
   button.classList.remove('selected');
 });
-
-
 
   const [votos, setVotos] = useState({
     pizzaMusarela: null,
@@ -84,7 +72,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
     EmpanadasCarne: null,
     MedialunaManteca: null,
     MedialunaJamonQueso: null,
-
     Pancho: null,
     tostadoArabe: null,
     tostadoArabeCompleto: null,
@@ -97,12 +84,10 @@ document.querySelectorAll('.menu button').forEach((button) => {
       ...prevVotos,
       [menuItem]: valor,
     }));
-
     setMensajes((prevMensajes) => ({
       ...prevMensajes,
       [menuItem]: '¡Gracias por votar! 👍',
     }));
-
     setTimeout(() => {
       setMensajes((prevMensajes) => ({
         ...prevMensajes,
@@ -134,8 +119,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
     handleStarLeave(menuItem);
   };
   
- 
-
   let content = null;
   switch (selectedMenu) {
     case 'Pizzas':
@@ -185,8 +168,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   {mensajes.pizzaJamon && <div className="mensaje-temporal">{mensajes.pizzaJamon}</div>}
   <div>
     <h3>Pizza Jamon</h3>
-    <p className='condimentos'>Queso, jamon, orégano, aceitunas, provenzal {/* <strong className=' text-white'>texto-alinea</strong> */}</p>
-    
+    <p className='condimentos'>Queso, jamon, orégano, aceitunas, provenzal </p>
     <p className="price">$3.600</p>
     <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
@@ -261,7 +243,7 @@ document.querySelectorAll('.menu button').forEach((button) => {
   {mensajes.pizzaStentor && <div className="mensaje-temporal">{mensajes.pizzaStentor}</div>}
   <div>
       <h3>Pizza Stentor</h3>
-      <p className='condimentos'>Queso, huevo frito, papas fritas, orégano, provenzal {/* <strong className=' text-white'>texto-alinea</strong> */}</p>
+      <p className='condimentos'>Queso, huevo frito, papas fritas, orégano, provenzal</p>
       <p className="price">$4.600</p>
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
     </div>
@@ -298,8 +280,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
 </div>
-
-
 <div className='menu-item HamburguesaCompleta'>
   <img src={ImagenHamburguesaDos} alt="Hamburguesa" />
   <div className="rating">
@@ -406,7 +386,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
 </div>
-
 </div>
     </div>
         );
@@ -440,7 +419,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
 </div>
-
   <div className='menu-item EmpanadasPollo'>
   <img src={ImagenEmpanadaPollo} alt="empanadas" />
   <div className="rating">
@@ -466,7 +444,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
 </div>
-
 <div className='menu-item EmpanadasCarne'>
 <img src={ImagenEmpanadaPollo} alt="empanadas" />
   <div className="rating">
@@ -521,7 +498,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
   <h3>Medialunas de manteca</h3>
   <p className="price">$500</p>
   {/* <p>Musarela, jamon y tomate</p>  */}
-  
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
 </div>
@@ -546,7 +522,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
   <h3>Medialunas de jamon y queso</h3>
   <p className="price">$900</p>
   {/* <p>Musarela, jamon y tomate</p>  */}
-  
       <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" rel="noopener noreferrer"><button className='boton-verEnPedidosYa'>Ver en Pedidos Ya</button></a>
   </div>
 </div>
@@ -659,7 +634,6 @@ document.querySelectorAll('.menu button').forEach((button) => {
                 );
                 break;           
   }
-
   return (
    <div>
     <div id="MenuYhorarios" className='menu'>
@@ -724,5 +698,4 @@ document.querySelectorAll('.menu button').forEach((button) => {
    </div>
   );
 }
-
 export default MenuSection;

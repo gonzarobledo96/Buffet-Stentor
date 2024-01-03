@@ -1,21 +1,13 @@
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
-
-
-
 function HorariosDeAtencion() {
-
-
-  
   return (
     <div>
         <div id="nuestrosHorarios" className="horarios-container">
       <div className=" text-center">
         <h1>HORARIOS DE ATENCION</h1>
       </div>
-
-
       <div className="horarios-info">
         <div className="horario-item">
           <h2>BUFFET</h2>
@@ -34,5 +26,4 @@ function HorariosDeAtencion() {
     </div>
   );
 }
-
 export default HorariosDeAtencion;

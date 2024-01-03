@@ -1,6 +1,4 @@
 function Ubicacion() {
-  
-
     return (
         <div id="ubicacion" >
          <div className="fondo-ubicacion">
@@ -19,6 +17,4 @@ function Ubicacion() {
     </div>
     );
   }
-  
-  export default Ubicacion;
-  
+  export default Ubicacion; 

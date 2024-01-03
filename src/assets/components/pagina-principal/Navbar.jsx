@@ -3,31 +3,21 @@ import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
  import { useState } from 'react';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-
 // import LogoStentor from '../img/LogoStentor.png';
 import PuertaStentor from '../img/puerta-de-stentor - copia.jpeg';
 import BuffetStentorLetras from '../img/BuffetStentorLetras.jpg';
 
-
-
-
-
 // export default NavbarComponent;
 const PaginaPrincipal = () => {
-
   const [isActive, setIsActive] = useState(false);
-
   const handleToggleClick = () => {
     setIsActive(!isActive);
   };
-  
-
     return (
       <div className="inicio" id="inicio">
         {/* fondo del navbar */}
       <div className="fixed-top">
-      <nav className="navbar navbar-expand-lg fondo-del-nav">
-        
+      <nav className="navbar navbar-expand-lg fondo-del-nav">  
         <div className="container-fluid">
         <img src={BuffetStentorLetras} alt="BuffetStentorLetras" />
         <div className="navbar-toggler hamburger" 
@@ -71,31 +61,26 @@ const PaginaPrincipal = () => {
                 INICIO
                 </a> 
               </li>
-
               <li className="nav-item">
                 <a className="nav-link diseño-texto-navbar" href="#pedidosYa" rel="noopener noreferrer">
                 PEDIDOS YA
                 </a>
               </li>
-
               <li className="nav-item">
                 <a className="nav-link diseño-texto-navbar" href="#MenuYhorarios" rel="noopener noreferrer">
                 MENU Y PRECIOS
                 </a>
               </li>
-
               <li className="nav-item">
                 <a className="nav-link diseño-texto-navbar" href="#promociones" rel="noopener noreferrer">
                   PROMOCIONES
                 </a>
               </li>
-
               <li className="nav-item">
                 <a className="nav-link diseño-texto-navbar" href="#eventos" rel="noopener noreferrer">
                 EVENTOS
                 </a>
-              </li>
-                          
+              </li>                         
               <li className="nav-item">
                 <a className="nav-link diseño-texto-navbar" href="#Galeria" rel="noopener noreferrer">
                   GALERIA
@@ -105,17 +90,12 @@ const PaginaPrincipal = () => {
                 <a className="nav-link diseño-texto-navbar" href="#ubicacion" rel="noopener noreferrer">
                 UBICACION
                 </a>
-              </li>          
-              
+              </li>                     
             </ul>
           </div>
         </div>
       </nav>
       </div>
-
-
-
-
       {/* <div className="contenido">
         <div className="presentacion">
           <div className="linea-presentacion">_______________________</div>
@@ -128,13 +108,11 @@ const PaginaPrincipal = () => {
           </a>
         </div>
       </div> */}
-
       <div id="carouselExampleControls" className="carousel slide fondo-principal" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
       <img src={PuertaStentor} className="d-block w-100" alt="..." />
     </div>
-
      {/* <div className="carousel-item">
       <img src="/src/assets/components/img/4.jpg" className="d-block w-100" alt="..."></img>
     </div>
@@ -153,17 +131,14 @@ const PaginaPrincipal = () => {
     <span className="visually-hidden">Next</span>
   </button>
 </div>
-
 {/* Logo de whatsapp y instagram */}
 <div className="whatsapp-container">
-  
       <a  href="https://api.whatsapp.com/send?phone=69115723&text=Hola%20sean%20Bienvenidos!" target="_blank" className="whatsapp-link" rel="noreferrer">
         <FontAwesomeIcon icon={faWhatsapp}  />
       </a>
       <a href="enlace-de-instagram" target="_blank" className="whatsapp-link-ig">
         <FontAwesomeIcon icon={faInstagram}  />
       </a>
-
       <a  href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-cantina-de-stentor-c09912e6-97d3-4c85-b950-17bc1c730bda-menu?search=STENTOR" target="_blank" className="whatsapp-link-py" rel="noreferrer">
         <p>PY</p>
       </a>
