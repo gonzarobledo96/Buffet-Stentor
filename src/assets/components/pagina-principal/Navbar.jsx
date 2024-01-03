@@ -41,7 +41,7 @@ const PaginaPrincipal = () => {
   aria-label="Toggle navigation"
   onClick={handleToggleClick}
 >
-  <div className="hamburger__container justify-content-center">
+  <div className="hamburger__container">
     <div className="hamburger__inner">
       {/* Utiliza el ícono de hamburguesa o cruz según el estado del menú */}
       <FontAwesomeIcon icon={isActive ? faTimes : faBars} />
@@ -53,7 +53,7 @@ const PaginaPrincipal = () => {
             className="collapse navbar-collapse posicion-nav"
             id="navbarSupportedContent"
           >
-            <ul className="navbar-nav ">
+            <ul className=" navbar-nav text-center">
 
             <li className="nav-item espacio-logo-navbar">
               <div id="logoresponsive">                 

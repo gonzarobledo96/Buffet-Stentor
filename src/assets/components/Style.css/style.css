@@ -122,9 +122,16 @@ body {
   border-color: rgb(226, 29, 38); 
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
 }
+
+
+
+
 .posicion-nav {
   justify-content: center;
  }
+ 
+
+
 .logo-transporte-escolar {
   margin-top: -10px;
 }
@@ -526,6 +533,13 @@ padding: 3em 0em 0em 0em;
 /********************/
 /* NAVBAR-PRINCIPAL */
 /********************/
+
+/* .posicion-nav {
+  justify-content: center;
+ } */
+
+
+
 .nav-item a {
   text-decoration: none;
   font-weight: 600;
@@ -544,7 +558,7 @@ padding: 3em 0em 0em 0em;
   }
   #logoresponsive img {
     margin-left: 10px;
-    max-width: 60%; /* La imagen no puede ser más ancha que su contenedor */
+    max-width: 60%; 
 }
 /*************************************/
 /* FONDO Y ESTILOS PARA LOS HORARIOS */
