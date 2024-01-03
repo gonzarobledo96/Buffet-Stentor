@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
  import { useState } from 'react';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
- import LogoStentor from '../img/LogoStentor.png';
+// import LogoStentor from '../img/LogoStentor.png';
 import PuertaStentor from '../img/puerta-de-stentor - copia.jpeg';
 import BuffetStentorLetras from '../img/BuffetStentorLetras.jpg';
 
@@ -54,7 +54,7 @@ const PaginaPrincipal = () => {
           >
             <ul className=" navbar-nav ">
             <li className="nav-item espacio-logo-navbar">
-                <div id="logoresponsive">                 
+               {/* <div id="logoresponsive">                 
               <figure>
                 <a href="#">
                 <img src={LogoStentor} alt="Descripción" />
@@ -66,10 +66,10 @@ const PaginaPrincipal = () => {
                 href="#trayectoria"
                 rel="noopener noreferrer"
                 style={{ color: 'white' }}>
-                  PEDIDOS YA</a> 
-                   {/* <a className="nav-link diseño-texto-navbar" href="#" rel="noopener noreferrer">
+                  PEDIDOS YA</a>  */}
+                   <a className="nav-link diseño-texto-navbar" href="#" rel="noopener noreferrer">
                 INICIO
-                </a>  */}
+                </a> 
               </li>
 
               <li className="nav-item">

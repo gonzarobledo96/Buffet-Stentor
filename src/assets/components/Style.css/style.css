@@ -106,12 +106,10 @@ body {
 /********************/
 /* NAVBAR-PRINCIPAL */
 /********************/
-
 .navbar-nav {
-  
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center; 
   margin-left: auto; /* Empuja los elementos del menú al centro */
 }
 
@@ -121,15 +119,12 @@ body {
   text-decoration: none;
 }
 
-
  .fondo-del-nav {
   background-color: white;
   border-bottom: solid 5px;
   border-color: rgb(226, 29, 38); 
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
 }
-
-
 
 .posicion-nav.collapse.show {
   display: flex;
@@ -555,9 +550,9 @@ padding: 3em 0em 0em 0em;
   padding: 10px 8px 0px;
 }
 
-.espacio-logo-navbar{
+/* .espacio-logo-navbar{
   margin-bottom: 3em;
-} 
+}  */
 
 
   .fondo-del-nav img{
