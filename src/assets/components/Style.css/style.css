@@ -112,20 +112,17 @@ body {
   align-items: center; 
   margin-left: auto; /* Empuja los elementos del menú al centro */
 }
-
 .nav-link {
   margin: 0 15px; /* Ajusta el espacio entre elementos del menú */
   font-size: 16px; /* Tamaño de la fuente del menú */
   text-decoration: none;
 }
-
  .fondo-del-nav {
   background-color: white;
   border-bottom: solid 5px;
   border-color: rgb(226, 29, 38); 
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
 }
-
 .posicion-nav.collapse.show {
   display: flex;
   flex-direction: column;
@@ -136,10 +133,6 @@ body {
   display: block; /* Para que ocupe el ancho completo */
   text-align: center;
 }
-
- 
-
-
 .logo-transporte-escolar {
   margin-top: -10px;
 }
@@ -524,24 +517,13 @@ padding: 3em 0em 0em 0em;
 }
 
 @media (max-width: 1000px) {
-  .menu-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  
 }
 
 @media (max-width: 800px) {
-  .menu-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-/*************************************/
-/* FONDO Y ESTILOS PARA LOS HORARIOS */
-/*************************************/
-@media (max-width: 600px) {
-/********************/
+ /********************/
 /* NAVBAR-PRINCIPAL */
 /********************/
-
 .nav-item a {
   text-decoration: none;
   font-weight: 600;
@@ -549,12 +531,6 @@ padding: 3em 0em 0em 0em;
   margin: 8px 10px;
   padding: 10px 8px 0px;
 }
-
-/* .espacio-logo-navbar{
-  margin-bottom: 3em;
-}  */
-
-
   .fondo-del-nav img{
    width: 70%;
     }
@@ -714,10 +690,177 @@ border-radius: 25px;
   background-color: #26235E;
   padding:1.5em;
 }
+}
 
 
-
-
-
-
+@media (max-width: 600px) {
+/********************/
+/* NAVBAR-PRINCIPAL */
+/********************/
+.nav-item a {
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  margin: 8px 10px;
+  padding: 10px 8px 0px;
+}
+  .fondo-del-nav img{
+   width: 70%;
+    }
+    #logoresponsive {
+      position: fixed;
+  }
+  #logoresponsive img {
+    margin-left: 10px;
+    max-width: 60%; 
+}
+/*************************************/
+/* FONDO Y ESTILOS PARA LOS HORARIOS */
+/*************************************/
+    .horario-item {
+  padding: 0px 10px;
+  }
+  .fondo-principal{
+    margin-top: 4em;
+  }
+.horarios-container {
+    padding: 10px;
+  }
+   .horarios-container h1 {
+   font-size: 1rem ;
+}
+  .horarios-info p {
+    font-size: 10px;
+    margin: 0px 0px;
+  }
+  .horario-item > h2{
+    font-size: 1rem;
+  }
+/*******************/
+/* MENY Y HORARIOS */
+/*******************/
+  .menu .logos-menu{
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .menu button {
+    margin: 18px 6px 10px 6px;
+}
+.menu-horario{
+  font-size: 10px;
+}
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 16px;
+  overflow-x: auto;
+}
+/* BARRA DE SCROOL DEL MENU Y DE LA CARTA */
+.menu-container::-webkit-scrollbar {
+  background-color: #fafafa;
+}
+ .logos-menu::-webkit-scrollbar {
+  background-color: #fafafa;
+}
+.fondoDeLosPrecios {
+  margin: 1em;
+}
+/********************/
+/* MENU DE LA CARTA */
+/********************/
+.iconos{
+  font-size: 2em;
+}
+.menu-item h3 {
+  font-size: 14px;
+}
+.price {
+  font-size: 1.5em;
+}
+  .star {
+    font-size: 20px;
+  }
+  .porcentaje-valor-producto{
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+/* BOTON DE PEDIDOS YA */
+.menu-item .condimentos{
+  padding-top: 1em;
+  font-size: 14px;
+}
+.menu-item .boton-verEnPedidosYa {
+  font-size: 10px;
+}
+/*******************/
+/* Promociones.css */
+/*******************/
+/* esto lo agregue para ver como queda el contador */
+.promocion-imagen {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0px;
+}
+.contador-regresivo {
+  text-align: center;
+}
+.contador-regresivo p {
+  color: #ffffff;
+  margin-bottom: 0px;
+  font-size: 10px;
+}
+/* Estilos para el contador regresivo de react-countdown */
+.tiempo-restante {
+  color: #ffffff;
+  font-size: 10px;
+}
+.boton-whatsapp {
+  width: 100%;
+  background-color: #25d366;
+color: white;
+ padding: 2px 12px;
+ margin: 0px 0px;
+text-decoration: none;
+font-size: 10px;
+cursor: pointer;
+border: 1px solid transparent; /* Establece un borde transparente por defecto */
+border-radius: 25px;
+}
+.boton-whatsapp:hover{
+  background-color:  white;
+  color: #25d366;
+  border: solid 1px #25d366;
+  }
+/***********/
+/* EVENTOS */
+/***********/
+.imagen-evento{
+    height: 40vh;
+    padding: 30px 20px 20px 20px;
+  }
+.titulo-evento h2{
+  font-size: 14px;
+}
+.titulo-evento p{
+  font-size: 10px;
+  color: #fff;
+ font-weight: 600;
+}
+/***************/
+/* Galeria.css */
+/***************/
+.galeria-container {
+  background-color: #ececec;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+/*************/
+/* UBICACION */
+/*************/
+.fondo-ubicacion {
+  background-color: #26235E;
+  padding:1.5em;
+}
 }
