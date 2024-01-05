@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 // import LogoStentor from '../img/LogoStentor.png';
 // import PuertaStentor from '../img/puerta-de-stentor - copia.jpeg';
- import logoprueba from '../img/buffet - copia_preview_rev_1.png';
+ import logoprueba from '../img/1_preview_rev_1 - copia.png';
 import PuertaStentor2 from '../img/puerta-de-stentor - copia - copia.jpeg';
 // import BuffetStentorLetras from '../img/BuffetStentorLetras.jpg';
 

@@ -112,7 +112,6 @@ body {
   align-items: center; 
   margin-left: auto; /* Empuja los elementos del menú al centro */
 }
-
 .fondo-del-nav {
   background-color: transparent;
   border-bottom: solid 5px;
@@ -120,7 +119,6 @@ body {
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0);
   transition: background-color 0.3s ease;
 }
-
 .scrolled .fondo-del-nav {
   background-color: white; /* O el color que desees */
   border-bottom: solid 5px;
@@ -128,19 +126,9 @@ body {
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
   transition: background-color 0.3s ease;
 }
-
 .scrolled .diseño-texto-navbar {
   color: rgb(0, 0, 0);
- 
 }
-
-
-
-
-
-
-
-
 .posicion-nav.collapse.show {
   display: flex;
   flex-direction: column;
@@ -1006,8 +994,6 @@ border-radius: 25px;
 .container-fluid{
   background-color: #ffffff;
 }
-
-
 .nav-item a {
   color: black;
   text-decoration: none;
@@ -1015,7 +1001,6 @@ border-radius: 25px;
   font-family: 'Montserrat', sans-serif;
   margin: 8px 10px;
   padding: 10px 8px 0px;
-  
 }
 
 .fondo-del-nav {
@@ -1023,9 +1008,6 @@ border-radius: 25px;
   border-color: rgb(226, 29, 38);
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
 }
-
-
-
   .fondo-del-nav img{
    width: 40%;
     }
