@@ -1,25 +1,56 @@
 
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
- import { useState } from 'react';
+ import { useState,useEffect } from 'react';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 // import LogoStentor from '../img/LogoStentor.png';
-import PuertaStentor from '../img/puerta-de-stentor - copia.jpeg';
-import BuffetStentorLetras from '../img/BuffetStentorLetras.jpg';
+// import PuertaStentor from '../img/puerta-de-stentor - copia.jpeg';
+ import logoprueba from '../img/buffet - copia_preview_rev_1.png';
+import PuertaStentor2 from '../img/puerta-de-stentor - copia - copia.jpeg';
+// import BuffetStentorLetras from '../img/BuffetStentorLetras.jpg';
+
+
 
 // export default NavbarComponent;
 const PaginaPrincipal = () => {
   const [isActive, setIsActive] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const handleToggleClick = () => {
     setIsActive(!isActive);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      // Ajusta el valor según cuándo quieres que aparezca el fondo
+      const scrollThreshold = 50;
+
+      if (scrollY > scrollThreshold) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Limpieza del evento al desmontar el componente
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
     return (
-      <div className="inicio" id="inicio">
+      <div className={`inicio ${isScrolled ? 'scrolled' : ''}`} id="inicio">
         {/* fondo del navbar */}
       <div className="fixed-top">
       <nav className="navbar navbar-expand-lg fondo-del-nav">  
         <div className="container-fluid">
-        <img src={BuffetStentorLetras} alt="BuffetStentorLetras" />
+        {/* <img src={BuffetStentorLetras} alt="BuffetStentorLetras" /> */}
+        <img src={logoprueba} alt="BuffetStentorLetras" />
         <div className="navbar-toggler hamburger" 
   type="button"
   data-bs-toggle="collapse"
@@ -57,10 +88,17 @@ const PaginaPrincipal = () => {
                 rel="noopener noreferrer"
                 style={{ color: 'white' }}>
                   PEDIDOS YA</a>  */}
-                   <a className="nav-link diseño-texto-navbar" href="#" rel="noopener noreferrer">
+                   {/* <a className="nav-link diseño-texto-navbar" href="#" rel="noopener noreferrer">
                 INICIO
-                </a> 
+                </a>  */}
               </li>
+
+              <li className="nav-item">
+                <a className="nav-link diseño-texto-navbar" href="#inicio" rel="noopener noreferrer">
+                INICIO
+                </a>
+              </li>
+
               <li className="nav-item">
                 <a className="nav-link diseño-texto-navbar" href="#pedidosYa" rel="noopener noreferrer">
                 PEDIDOS YA
@@ -96,41 +134,48 @@ const PaginaPrincipal = () => {
         </div>
       </nav>
       </div>
-      {/* <div className="contenido">
+
+       {/* <div className="contenido bg-black">
         <div className="presentacion">
           <div className="linea-presentacion">_______________________</div>
           <p className="bienvenida">Bienvenidos</p>
-          <h2 className="Transporte-Raul">TRANSPORTE RAUL</h2>
-          <p className="descripcion">EMPRESA ESCOLAR</p>
+          <h2 className="Transporte-Raul">BUFFET STENTOR</h2>
+          
           <div className="linea-presentacion2">_______________________</div>
           <a href="https://api.whatsapp.com/send?phone=26428286&text=Hola%20sean%20bienvenidos!">
             <i className="fa-brands fa-whatsapp"></i> PREGUNTAR PRESUPUESTO
           </a>
         </div>
-      </div> */}
+      </div>  */}
+
+      
       <div id="carouselExampleControls" className="carousel slide fondo-principal" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src={PuertaStentor} className="d-block w-100" alt="..." />
+      <div className="carousel-caption ">
+        <p className="bienvenida">Bienvenidos</p>
+        <h2 className="BuffetStentor">BUFFET STENTOR</h2>
+        {/* <a href="https://api.whatsapp.com/send?phone=26428286&text=Hola%20sean%20bienvenidos!">
+          <i className="fa-brands fa-whatsapp PreguntarPresupuesto"></i> PREGUNTAR PRESUPUESTO
+        </a> */}
+      </div>
+      {/* <img src={PuertaStentor} className="d-block w-100" alt="..." /> */}
+      <img src={PuertaStentor2} className="d-block w-100" alt="..." />
     </div>
-     {/* <div className="carousel-item">
-      <img src="/src/assets/components/img/4.jpg" className="d-block w-100" alt="..."></img>
-    </div>
-
-    <div className="carousel-item">
-      <img src="/src/assets/components/img/3.jpeg" className="d-block w-100" alt="..."></img>
-    </div> 
-     */}
+    {/* Otras imágenes del carrusel aquí */}
   </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+  {/* <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
     <span className="visually-hidden">Previous</span>
   </button>
   <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
     <span className="carousel-control-next-icon" aria-hidden="true"></span>
     <span className="visually-hidden">Next</span>
-  </button>
+  </button> */}
 </div>
+
+
+
 {/* Logo de whatsapp y instagram */}
 <div className="whatsapp-container">
       <a  href="https://api.whatsapp.com/send?phone=69115723&text=Hola%20sean%20Bienvenidos!" target="_blank" className="whatsapp-link" rel="noreferrer">
