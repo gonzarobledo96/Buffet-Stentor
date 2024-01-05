@@ -1,9 +1,5 @@
-# React + Vite
+# Buffet Stentor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ESTE ES UN PROYECTO SOBRE UN BUFFET DE BARRIO QUE ADMINISTRA MI PRIMO. CON EL FIN DE AYUDAR A MI PRIMO LE ARME UN SITIO WEB SENCILLO PERO FUNCIONAL PARA PODER ATRAER A MAS PERSONAS.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
+![Descripción de la imagen](https://i.imgur.com/ZsNHpv0.png)
